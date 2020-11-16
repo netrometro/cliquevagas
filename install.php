@@ -10,7 +10,7 @@ $sql ="CREATE TABLE usuario(";
 $sql .= "codigo SERIAL NOT NULL,";
 $sql .= "nome VARCHAR(250),";
 $sql .= "email VARCHAR(100),";
-$sql .= "senha VARCHAR(150,";
+$sql .= "senha VARCHAR(150),";
 $sql .= "PRIMARY KEY(codigo)";
 $sql .= ");";
 /* PASSANDO O PARAMETRO SQL PARA FUNÇÃO BANCO */
