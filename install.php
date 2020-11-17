@@ -34,7 +34,7 @@ $sql .="descricao VARCHAR(400),";
 $sql .="telefone VARCHAR(100),";
 $sql .="email VARCHAR(100),";
 $sql .="endereco VARCHAR(100),";
-$sql .="tempo DATE NOT DEFAULT CURRENT_DATE";
+$sql .="tempo DATE NOT NULL DEFAULT CURRENT_DATE";
 $sql .=");";
 /* PASSANDO O PARAMETRO SQL PARA FUNÇÃO BANCO */
 banco($sql);
