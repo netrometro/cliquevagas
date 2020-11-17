@@ -4,7 +4,7 @@ require("db.php");
 /* DELETAR TABELA CASO EXISTER usuario */
 banco("DROP TABLE IF EXISTS usuario");
 /* PRINTAR SE A TABELA FOI APAGADA */
-echo "<p>Tabela usuário apagada com sucesso !</p>";
+echo "<p>Tabela usuário apagada com sucesso !</p>"
 /* CRIAR TABELA E POPULAR COM VALORES */
 $sql ="CREATE TABLE usuario(";
 $sql .= "codigo SERIAL NOT NULL,";
