@@ -1,6 +1,7 @@
 <?php 
 /* SOLICITANDO ARQUIVO DE CONEXÃO COM O BANCO */
 require("db.php");
+
 /* DELETAR TABELA CASO EXISTER empresa */
 banco("DROP TABLE IF EXISTS empresa");
 /* PRINTAR SE A TABELA FOI APAGADA */
