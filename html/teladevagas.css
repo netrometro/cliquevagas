@@ -28,14 +28,6 @@ body, p, input, textarea, a {
   background-color: #FFF4E6;
 }
 
-.bg3 {
-  background-color: #3C2F2F;
-}
-
-.bg4 {
-  background-color: #BE9B7B;
-}
-
 .armario {
   flex: 1;
   display: flex;
@@ -43,9 +35,9 @@ body, p, input, textarea, a {
 }
 
 .gaveta {
-  flex: 1;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
 }
 
 .titulo {
@@ -53,12 +45,6 @@ body, p, input, textarea, a {
   text-align: center;
   font-family: Roboto, Arial, sans-serif;
   font-size: 28px;
-}
-
-.mensagem {
-  padding: 0px 30px;
-  text-align: center;
-  font-size: 24px;
 }
 
 .caixatexto {
@@ -83,17 +69,14 @@ body, p, input, textarea, a {
   background: transparent;
 }
 
-.botao {
-  display: block;
-  margin: 15px;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 18px;
+.card {
+    margin: 5px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: black 10px;
+    padding: 10px;
 }
+
 
 @media screen and (min-width: 480px) {
   .caixatexto, .botao { 
