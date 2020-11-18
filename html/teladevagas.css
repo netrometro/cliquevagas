@@ -5,12 +5,6 @@ html,body{
   height:100%;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 body {
   margin: 0px;
   padding: 0px;
@@ -73,7 +67,7 @@ body, p, input, textarea, a {
     margin: 5px 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: black 10px;
+    box-shadow: 10px black;
     padding: 10px;
 }
 
@@ -83,4 +77,13 @@ body, p, input, textarea, a {
     max-width: 400px;
     margin: 15px auto;
    }
+
+   .card {
+    margin: 5px 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px black;
+    padding: 10px;
+}
+
 }

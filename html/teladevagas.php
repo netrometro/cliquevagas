@@ -19,7 +19,7 @@
         <form action='#' method='post'>
           <div class="caixatexto">
             <input type="text" placeholder="Procure sua vaga" />
-            <button type="submit"><i class="material-icons">search</i></button>
+            <button type="submit"><i class="material-icons">grade</i></button>
           </div>
         </form>
       </div>
