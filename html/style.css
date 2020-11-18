@@ -67,7 +67,6 @@ body, p, input, textarea, a {
   background-color: #ccc;
   margin: 5px 20px;
   padding: 10px;
-  border-radius: 10px;
 }
 
 .caixatexto input[type=text] {
