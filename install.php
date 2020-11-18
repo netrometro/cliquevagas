@@ -42,6 +42,8 @@ banco($sql);
 echo "<p>Tabela Anuncios criada com sucesso !</p>";
 $sql ="INSERT INTO anuncios (precisase, descricao, telefone, email, endereco, tempo) ";
 $sql .="VALUES ('Barbeiro', 'Precisa-se de barbeiro experiente.', '8198772364', 'barbershop@barber.com', 'Rua campo novo 199', '2020-10-23');";
+$sql .="VALUES ('Mecanico', 'Precisa-se de Mecanico Maneta.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', '1500-09-24');";
 banco($sql);
 echo "<p>Tabela Anuncios populada com sucesso ! </p>";
+
 ?>
