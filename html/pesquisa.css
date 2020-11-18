@@ -58,7 +58,7 @@ body, p, input, textarea, a {
   font-size: 20px;
 }
 
-.caixatexto button[type=submit] {
+.caixatexto button[type=button] {
   border: none;
   background: transparent;
 }
@@ -69,6 +69,33 @@ body, p, input, textarea, a {
     border-radius: 10px;
     box-shadow: 10px black;
     padding: 10px;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.janela {
+  width: 200px;
+  margin: 200px auto;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.titulomodal {
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.conteudo, .formsalvarpesquisa {
+  padding: 10px;
 }
 
 

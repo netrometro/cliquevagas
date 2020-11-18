@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -12,6 +8,19 @@
     <link rel="stylesheet" href="pesquisa.css" />
   </head>
   <body class="bg2">
+    <div class="modal">
+      <div class="janela">
+        <div class="titulomodal bg1">Salvar pesquisa</div>
+        <div class="conteudo"><p>Cadastre seu e-mail que lhe enviaremos uma oportunidade assim que ela for cadastrada.</p></div>
+        <div class="formsalvarpesquisa">
+          <form action="" method="post">
+            <input type="text" placeholder="Digite seu e-mail" />
+            <input type="submit" value="Salvar" />
+            <button type="button" onclick="cancel()">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <header>
     <div class="titulo bg1"><img src="images/logo.png" /> Click Vagas Caruaru</div>  
     <div class="armario">
@@ -19,7 +28,7 @@
         <form action='#' method='post'>
           <div class="caixatexto">
             <input type="text" placeholder="Procure sua vaga" />
-            <button type="submit"><i class="material-icons">grade</i></button>
+            <button type="button" onclick="modal()"><i class="material-icons">grade</i></button>
           </div>
         </form>
       </div>
@@ -41,5 +50,6 @@
 
     </div>
 
+    <script src="pesquisa.js"></script>
   </body>
 </html>
