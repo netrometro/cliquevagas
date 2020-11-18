@@ -14,9 +14,9 @@
         <div class="conteudo"><p>Cadastre seu e-mail que lhe enviaremos uma oportunidade assim que ela for cadastrada.</p></div>
         <div class="formsalvarpesquisa">
           <form action="" method="post">
-            <input type="text" placeholder="Digite seu e-mail" />
-            <input type="submit" value="Salvar" />
-            <button type="button" onclick="cancel()">Cancelar</button>
+            <input class="digiteemail" type="text" placeholder="Digite seu e-mail" />
+            <button class="botaocancelar" type="button" onclick="cancel()">Cancelar</button>
+            <input class="botaosalvar" type="submit" value="Salvar pesquisa" />
           </form>
         </div>
       </div>

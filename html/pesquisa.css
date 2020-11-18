@@ -81,21 +81,53 @@ body, p, input, textarea, a {
 }
 
 .janela {
-  width: 200px;
+  width: 300px;
   margin: 200px auto;
   background-color: white;
   border-radius: 20px;
+  align-items: center;
 }
 
 .titulomodal {
   text-align: center;
   color: white;
-  border-radius: 20px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .conteudo, .formsalvarpesquisa {
   padding: 10px;
+}
+
+.digiteemail {
+    width: 220px;
+    height: 30px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.botaosalvar {
+  background-color: #3C2F2F;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  margin-left: 40px;
+}
+
+.botaocancelar {
+  background-color: transparent;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #3C2F2F;
+  margin-left: 20px;
 }
 
 
@@ -112,5 +144,6 @@ body, p, input, textarea, a {
     box-shadow: 10px black;
     padding: 10px;
 }
+
 
 }
