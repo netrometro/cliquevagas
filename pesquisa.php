@@ -22,7 +22,7 @@ if (isset($_SESSION['resultado']) and $_SESSION['resultado'] != "") {
         <div class="titulomodal bg1">Salvar pesquisa</div>
         <div class="conteudo"><p>Cadastre seu e-mail que lhe enviaremos uma oportunidade assim que ela for cadastrada.</p></div>
         <div class="formsalvarpesquisa">
-          <form action="" method="post">
+          <form action="controllers/pesquisar_anuncio.php" method="post">
             <input class="digiteemail" type="text" placeholder="Digite seu e-mail" />
             <button class="botaocancelar" type="button" onclick="cancel()">Cancelar</button>
             <input class="botaosalvar" type="submit" value="Salvar pesquisa" />
