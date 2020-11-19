@@ -61,7 +61,7 @@ if (isset($_SESSION['resultado']) and $_SESSION['resultado'] != "") {
 
 <?php
 if (isset($resultado)) {
-  while ($dados = pg_fetch_array($resultado))
+  while ($dados = pg_fetch_row($resultado))
 ?>
     <div class="container card">
       <h3><?= $dados['empresa'] . ?></h3>
