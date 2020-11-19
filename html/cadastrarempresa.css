@@ -80,7 +80,7 @@ body, p, input, textarea, a {
 }
 
 .caixanome {
-    width: 315px;
+    width: 300px;
     height: 20px;
     display: flex;
     background-color: #ccc;
@@ -91,7 +91,7 @@ body, p, input, textarea, a {
 }
 
 .caixaemail {
-    width: 315px;
+    width: 300px;
     height: 20px;
     display: flex;
     background-color: #ccc;
@@ -102,7 +102,7 @@ body, p, input, textarea, a {
 }
 
 .caixasenha {
-    width: 315px;
+    width: 300px;
     height: 20px;
     display: flex;
     background-color: #ccc;
