@@ -75,6 +75,8 @@ if (isset($resultado)) {
       <p><?= $dados['email'] ?></p>
 
     </div>
+    <? pg_close($conn); ?>
+    <?  return $resultado; ?>
 <?php } ?>
     <script src="pesquisa.js"></script>
   </body>
