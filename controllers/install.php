@@ -1,6 +1,6 @@
 <?php 
 /* SOLICITANDO ARQUIVO DE CONEXÃO COM O BANCO */
-require("db.php");
+require("model/persistency/db.php");
 
 /* DELETAR TABELA CASO EXISTIR empresa */
 banco("DROP TABLE IF EXISTS empresa");
