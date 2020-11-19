@@ -1,5 +1,5 @@
 <?php
-require('model/persistency/db.php');
+require('../model/persistency/db.php');
 
 if (!isset($_POST) or $_POST['pesquisa'] == "") {
   header("Location: ../pesquisa.php");
