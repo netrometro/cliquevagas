@@ -17,11 +17,11 @@
     </header>
 
     <div class="tema">
-        <h2>Crie sua conta</h2>
-        <h4>Divulgue sua vaga rápido e fácil.</h4>
+        <h2 class="tituloconta">Crie sua conta</h2>
+        <h4 class="temasub">Divulgue sua vaga rápido e fácil.</h4>
     </div>
 
-    <div>
+    <div class="formulario">
     <form>
         <p>Nome:</p>
         <input class="caixanome" type="text" method="POST" />
@@ -29,9 +29,16 @@
         <input class="caixaemail" type="email" method="POST" />
         <p>Senha:</p>
         <input class="caixasenha" type="password" method="POST" />
+        <p class="textosenha">Use 8 ou mais caracteres para sua senha, faça uma mistura de letras, números & símbolos.</p>
     </form>
     </div>
 
+    <div>
+      <button class="botaoconfirma" type="submit">Vamos começar a divulgar</button>
+      <p class="textodownbotao">Ao se cadastrar, você está concordando com os <a class="linksdownbotao" href="#">Termos de Uso</a> 
+        Clique Vagas Caruaru e <a class="linksdownbotao" href="#">Políticas de Privacidade.</a></p>
+      <p class="pjatemconta">Já possui conta?<a class="linksdownbotao" href="#"> Clique aqui para se logar!</a></p>
+    </div>
 
   </body>
 </html>

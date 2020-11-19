@@ -25,7 +25,7 @@
       </div>
       <div class="gaveta">
         <a class="botao bg3" href="#">Entrar como empresa</a>
-        <a class="botao bg4" href="#">Cadastrar empresa</a>
+        <a class="botao bg4" href="html/cadastrarempresa.php">Cadastrar empresa</a>
       </div>
     </div>
     </header>
