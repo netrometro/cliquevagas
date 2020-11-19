@@ -64,13 +64,13 @@ if (isset($resultado)) {
   while ($dados = pg_fetch_row($resultado))
 ?>
     <div class="container card">
-      <h3><?= $dados['empresa'] . ?></h3>
-      <h4><?= $dados['precisase'] . ?></h4>
-      <p><?= $dados['descricao'] . ?></p>
+      <h3><?= $dados['empresa'] ?></h3>
+      <h4><?= $dados['precisase'] ?></h4>
+      <p><?= $dados['descricao'] ?></p>
       <p><strong>Contato:</strong></p>
-      <p><?= $dados['telefone'] . ?></p>
-      <p><?= $dados['endereco'] . ?></p>
-      <p><?= $dados['email'] . ?></p>
+      <p><?= $dados['telefone'] ?></p>
+      <p><?= $dados['endereco'] ?></p>
+      <p><?= $dados['email'] ?></p>
 
     </div>
     <? pg_close($conn); ?>
