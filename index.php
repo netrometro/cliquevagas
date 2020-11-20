@@ -1,8 +1,10 @@
 <?php
-if (isset($_POST['busca']) && $_POST['busca'] != "") {
-  $busca = true;
-} else {
+if (!isset($_POST['busca']) && $_POST['busca'] == "") {
   $busca = false;
+} else {
+  $busca = true;
+
+  require('model/pesquisa_anuncio.php');
 }
 ?>
 
