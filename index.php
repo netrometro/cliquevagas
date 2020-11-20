@@ -16,7 +16,7 @@
         <p class="mensagem">Encontre uma oportunidade de emprego.</p>
       </div>
       <div class="gaveta">
-        <form action='controllers/pesquisar_anuncio.php' method='post'>
+        <form name="pesquisa" action='controllers/pesquisar_anuncio.php' method='post'>
           <div class="caixatexto">
             <input name="busca" type="text" placeholder="Procure sua vaga" />
             <button type="submit"><i class="material-icons">search</i></button>
