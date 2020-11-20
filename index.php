@@ -1,8 +1,10 @@
 <?php
-if (isset($_POST['busca']) && $_POST['busca'] != "") {
-  $busca = true;
-} else {
+if (!isset($_POST['busca']) && $_POST['busca'] == "") {
   $busca = false;
+} else {
+  $busca = true;
+
+require('model/pesquisa_anuncio.php');
 }
 ?>
 
@@ -33,7 +35,7 @@ if (isset($_POST['busca']) && $_POST['busca'] != "") {
         <div class="pesquisa">
           <p class="mensagem">Encontre uma oportunidade de emprego.</p>
 
-          <form action="#" method="post">
+          <form action="model/pesquisar_anuncio.php" method="post">
             <div class="caixatexto">
               <input name="busca" type="text" placeholder="Procure sua vaga" />
               <button type="submit"><i class="material-icons">search</i></button>
