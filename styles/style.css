@@ -94,6 +94,14 @@ body, p, input, textarea, a {
   font-size: 18px;
 }
 
+.card {
+  margin: 5px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px black;
+  padding: 10px;
+}
+
 @media screen and (min-width: 480px) {
   .caixatexto, .botao { 
     max-width: 400px;
