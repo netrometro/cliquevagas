@@ -120,9 +120,85 @@ p {
     text-align: center;
 }
 
+.textosenha {
+  font-size: 12px;
+  color: #BE9B7B;
+}
+
+.tituloconta {
+  margin-top: 20px;
+  font-size: 35px;
+}
+
+.temasub {
+  margin-top: -30px;
+  color: #BE9B7B;
+}
+
+.botaoconfirma {
+  display: block;
+  margin: 15px auto;
+  margin-top: 25px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  background-color: #3C2F2F;
+}
+
+.textodownbotao {
+  margin: 15px 35px;
+  font-size: 12px;
+  color: #BE9B7B;
+  text-align: center;
+}
+
+.linksdownbotao {
+  font-size: 12px;
+  color: #BE9B7B;
+}
+
+.pjatemconta {
+  margin: 15px 35px;
+  margin-top: 50px;
+  font-size: 12px;
+  color: #BE9B7B;
+  text-align: center;
+}
+
 @media screen and (min-width: 480px) {
   .caixatexto, .botao { 
     max-width: 400px;
     margin: 15px auto;
    }
+}
+
+@media screen and (min-width: 800px) {
+  .formulario {
+   margin-left: 30%;
+  }
+
+  .caixanome {
+    width: 500px;
+  }
+
+  .caixaemail {
+    width: 500px;
+  }
+
+  .caixasenha {
+    width: 500px;
+  }
+
+  .botaoconfirma {
+    margin-top: 50px;
+  }
+
+  .textodownbotao {
+    margin: 15px 500px;
+  }
 }
