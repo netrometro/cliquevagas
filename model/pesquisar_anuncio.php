@@ -1,5 +1,5 @@
 <?php
-require('model/persistency/db.php');
+require('persistency/db.php');
 
 if (!isset($_POST['busca']) && $_POST['busca'] == "") {
   // Se não tem busca, retorna todos os anuncios
