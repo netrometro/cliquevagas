@@ -11,6 +11,7 @@ if (!isset($_POST['busca']) && $_POST['busca'] == "") {
 
 $resultado = banco($sql);
 
+echo "teste";
 print_r($resultado);
 
 //header("Location: ../index.php");
