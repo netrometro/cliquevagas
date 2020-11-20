@@ -71,7 +71,7 @@ if (isset($resultado)) {
       <p><?= $dados['telefone']; ?></p>
       <p><?= $dados['endereco']; ?></p>
       <p><?= $dados['email']; ?></p>
-      <? echo .@$empresa; ?> 
+      <? echo @$empresa; ?> 
 
     </div>
     <? pg_close($conn); ?>
