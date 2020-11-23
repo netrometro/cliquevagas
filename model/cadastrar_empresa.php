@@ -13,7 +13,8 @@ if (isset($_POST['submit'])) {
     if($sql){
         echo "Dados gravado com sucesso.";
     }
-    banco($sql);
+    $resultado = banco($sql);
+    echo $resultado;
     //header("Location: ../listaranuncio.php ")
   }
     //header("Location: ../empresa.html")
