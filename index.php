@@ -1,11 +1,10 @@
 <?php
-if (!isset($_POST['busca']) && $_POST['busca'] == "") {
-  $busca = false;
-} else {
+$busca = false;
+if (isset($_POST['busca']) && $_POST['busca'] != "") {
   $busca = true;
-
-require('model/pesquisa_anuncio.php');
 }
+
+require("model/pesquisar_anuncio.php");
 ?>
 
 <!DOCTYPE html>
@@ -48,18 +47,14 @@ require('model/pesquisa_anuncio.php');
 
         <div class="resultado">
           <p class="mensagem">Vagas 000</p>
-
+<?php while ($row = pg_fetch_row($resultado)) { ?>
           <div class="container card">
             <p>Vencimento dia 27/12/2020</p>
-            <h3>SENAC</h3>
+            <h3>......</h3>
 
-            <h4>Auxiliar de Eletricista, Instalador Fotovoltáico.</h4>
+            <h4><?= $row[1] ?></h4>
 
-            <p>Auxiliar de eletricista experiência de 1 ano, ter curso
-              de eletricista predial e disponibilidade para trabalhar
-              durante a madrugada.<br/>
-              Instador fotovotáico, curso de eletrotécnica e 
-              experiência de 2 anos.</p>
+            <p><?= $row[2] ?></p>
 
             <p><strong>Contato:</strong></p>
             
@@ -69,6 +64,7 @@ require('model/pesquisa_anuncio.php');
             <p>endereço</p>
 
           </div>
+<?php } ?>
         </div>
 
 
