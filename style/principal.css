@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+}
+
+body, p, input, textarea, a {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+
+.bg1 {
+  background-color: #854442;
+}
+
+.bg2 {
+  background-color: #FFF4E6;
+}
+
+.bg3 {
+  background-color: #3C2F2F;
+}
+
+.bg4 {
+  background-color: #BE9B7B;
+}
+
+
+.titulo {
+  color: #fff;
+  text-align: center;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 28px;
+}
