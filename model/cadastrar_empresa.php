@@ -6,7 +6,7 @@ echo $_POST['email'];
 echo $_POST['senha'];
 
 if (!isset($_POST['empresa']) && $_POST['empresa'] == "" && 
-    !isset($_POST['email']) &&| $_POST['email'] == ""  && 
+    !isset($_POST['email']) && $_POST['email'] == ""  && 
     !isset($_POST['senha']) && $_POST['senha'] == "" ) {
         $nome = $_POST['empresa'];
         $email = $_POST['email'];
