@@ -1,0 +1,131 @@
+.mensagem {
+    padding: 0px 30px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .caixatexto {
+    height: 30px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .caixatexto input[type=text] {
+    flex: 1;
+    border: none;
+    background: transparent;
+    height: 30px;
+    font-size: 20px;
+  }
+  
+  .caixatexto button[type=submit] {
+    border: none;
+    background: transparent;
+  }
+  
+  .botao {
+    display: block;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .caixanome {
+      width: 300px;
+      height: 20px;
+      display: flex;
+      background-color: #ccc;
+      margin: 5px 20px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+  }
+  
+  .caixaemail {
+      width: 300px;
+      height: 20px;
+      display: flex;
+      background-color: #ccc;
+      margin: 5px 20px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+  }
+  
+  .caixasenha {
+      width: 300px;
+      height: 20px;
+      display: flex;
+      background-color: #ccc;
+      margin: 5px 20px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+  }
+  
+  p {
+      margin: 10px 20px;
+  }
+  
+  .tema {
+      text-align: center;
+  }
+  
+  .textosenha {
+    font-size: 12px;
+    color: #BE9B7B;
+  }
+  
+  .tituloconta {
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  
+  .temasub {
+    margin-top: -30px;
+    color: #BE9B7B;
+  }
+  
+  .botaoconfirma {
+    display: block;
+    margin: 15px auto;
+    margin-top: 25px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    background-color: #3C2F2F;
+  }
+  
+  .textodownbotao {
+    margin: 15px 35px;
+    font-size: 12px;
+    color: #BE9B7B;
+    text-align: center;
+  }
+  
+  .linksdownbotao {
+    font-size: 12px;
+    color: #BE9B7B;
+  }
+  
+  .pjatemconta {
+    margin: 15px 35px;
+    margin-top: 50px;
+    font-size: 12px;
+    color: #BE9B7B;
+    text-align: center;
+  }
+  
