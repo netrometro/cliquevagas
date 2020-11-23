@@ -8,11 +8,12 @@ if (isset($_POST['submit'])) {
     $nome = $_POST['empresa'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $sql = 'INSERT INTO empresa (nome, email, senha)';
-    $sql .= "VALUES ('$nome', '$email', '$senha');";
-    if($sql){
-        echo "Dados gravado com sucesso.";
-    }
+    echo $nome;
+    echo $email;
+    echo $senha;
+    $sql = "INSERT INTO empresa (nome, email, senha)";
+    $sql .= " VALUES ('$nome', '$email', '$senha');";
+    echo $sql;
     $resultado = banco($sql);
     echo $resultado;
     //header("Location: ../listaranuncio.php ")
