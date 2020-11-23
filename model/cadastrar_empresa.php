@@ -10,7 +10,7 @@ if (!isset($_POST['empresa']) || $_POST['empresa'] == "" &&
     $sql = 'INSERT INTO empresa (nome, email, senha)';
     $sql .= "VALUES ('$nome', '$email', '$senha');";
     banco($sql);
-    //header("Location: ../listaranuncio.php ")
+    header("Location: ../listaranuncio.php ")
   }
-    //header("Location: ../empresa.html")
+    header("Location: ../empresa.html")
 ?>
