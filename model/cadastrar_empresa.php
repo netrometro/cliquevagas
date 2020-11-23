@@ -1,10 +1,8 @@
 <?php 
 /* SOLICITANDO ARQUIVO DE CONEXÃO COM O BANCO */
 require("persistency/db.php");
-echo $_POST['empresa'];
-echo $_POST['email'];
-echo $_POST['senha'];
-//if (isset($_POST['submit'])) {
+print_r ($_POST);
+if (isset($_POST['submit'])) {
     $nome = $_POST['empresa'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
@@ -17,6 +15,6 @@ echo $_POST['senha'];
     $resultado = banco($sql);
     echo $resultado;
     //header("Location: ../listaranuncio.php ")
- // }
+  }
     //header("Location: ../empresa.html")
 ?>
