@@ -7,7 +7,7 @@ if (!isset($_POST['empresa']) || $_POST['empresa'] == "" &&
         $nome = $_POST['empresa'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-    $sql = 'INSERT INTO anuncios (nome, email, senha)';
+    $sql = 'INSERT INTO empresa (nome, email, senha)';
     $sql .= "VALUES ('$nome', '$email', '$senha');";
     banco($sql);
     //header("Location: ../listaranuncio.php ")
