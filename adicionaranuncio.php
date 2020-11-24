@@ -32,6 +32,7 @@
           <h4>Tempo de anúncio:</h4>
           <div class="slidecontainer">
             <input type="range" min="1" max="30" value="30" class="slider" id="myRange">
+            <p>Dias: <span id="demo"></span></p>
           </div>
           <div class="botoes">
           <button class="botaocancelar" type="button" onclick="">Cancelar</button>
