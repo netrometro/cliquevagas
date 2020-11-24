@@ -93,7 +93,10 @@ require("model/pesquisar_anuncio.php");
     function salvar() {
       document.getElementById('modal').style = "display: block";
     }
-    
+
+    function cancel() {
+      document.getElementById('modal').style = "display: none";
+    }
     </script>
   </body>
 </html>

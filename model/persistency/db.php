@@ -1,5 +1,5 @@
 <?php
-//putenv("DATABASE_URL=host=localhost port=5432 dbname=postgres");
+putenv("DATABASE_URL=host=localhost port=5432 dbname=postgres");
 //echo getenv("DATABASE_URL");
 
 /* CONEXÃO DE BANCO SQL */
