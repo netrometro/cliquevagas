@@ -1,0 +1,99 @@
+.tema {
+    text-align: center;
+}
+
+.tituloconta {
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  
+.temasub {
+    margin-top: -30px;
+    color: #BE9B7B;
+  }
+
+.caixaemail {
+    width: 300px;
+    height: 20px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.caixasenha {
+    width: 300px;
+    height: 20px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+p {
+    margin: 10px 50px;
+    text-align: center;
+}
+
+.botaoconfirma {
+    display: block;
+    margin: 15px auto;
+    margin-top: 25px;
+    padding: 15px 50px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    background-color: #3C2F2F;
+  }
+
+.nameemail {
+    margin: 10px 50px;
+    text-align: left;
+}
+
+.namesenha {
+    margin: 10px 50px;
+    text-align: left;
+}
+
+.textodownbotao {
+    color: #BE9B7B;
+}
+
+.pjatemconta {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    color: #BE9B7B;
+}
+
+a {
+    color: #BE9B7B;
+}
+
+@media screen and (min-width: 480px) {
+    .caixaemail {
+        width: 500px;
+    }
+    
+    .caixasenha {
+        width: 500px;
+}
+
+.nameemail {
+    margin-left: 430px;
+}
+
+.namesenha {
+    margin-left: 430px;
+}
+
+}
+  
