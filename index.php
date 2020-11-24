@@ -27,21 +27,21 @@ require("model/pesquisar_anuncio.php");
 
       <div class="conteudo">
         <div class="menu" <?= ($busca) ? 'style="display:none"' : "" ?> >
-          <a class="botao bg3" href="login.html">Entrar como empresa</a>
-          <a class="botao bg4" href="empresa.html">Cadastrar empresa</a>
+          <a class="botao bg3" href="login.php">Entrar como empresa</a>
+          <a class="botao bg4" href="empresa.php">Cadastrar empresa</a>
         </div>
 
         <div class="pesquisa">
           <p class="mensagem">Encontre uma oportunidade de emprego.</p>
 
-          <form action="model/pesquisar_anuncio.php" method="post">
+          <form action="index.php" method="post">
             <div class="caixatexto">
               <input name="busca" type="text" placeholder="Procure sua vaga" />
               <button type="submit"><i class="material-icons">search</i></button>
             </div>
           </form>
 
-          <a <?= ($busca) ? 'style="display:block"' : "" ?> class="botao bg4 salvar" href="empresa.html">Salvar pesquisa</a>
+          <a onClick="salvar()" <?= ($busca) ? 'style="display:block"' : "" ?> class="botao bg4 salvar">Salvar pesquisa</a>
 
         </div>
 
@@ -70,13 +70,14 @@ require("model/pesquisar_anuncio.php");
 
       </div>
 
-      <div class="modal">
+      <div id="modal" class="modal">
         <div class="janela">
           <div class="titulomodal bg1">Salvar pesquisa</div>
           <div class="conteudo"><p>Cadastre seu e-mail que lhe enviaremos uma oportunidade assim que ela for cadastrada.</p></div>
           <div class="formsalvarpesquisa">
-            <form action="controllers/pesquisar_anuncio.php" method="post">
-              <input class="digiteemail" type="text" placeholder="Digite seu e-mail" />
+            <form action="model/salvar_pesquisa.php" method="post">
+              <input class="digiteemail" name="email" type="text" placeholder="Digite seu e-mail" />
+              <input type="hidden" name="pesquisa" value="<?= ($busca) ? $_POST['busca'] : '' ?>" />
               <button class="botaocancelar" type="button" onclick="cancel()">Cancelar</button>
               <input class="botaosalvar" type="submit" value="Salvar pesquisa" />
             </form>
@@ -85,5 +86,14 @@ require("model/pesquisar_anuncio.php");
       </div>
 
     </div>
+
+
+
+    <script>
+    function salvar() {
+      document.getElementById('modal').style = "display: block";
+    }
+    
+    </script>
   </body>
 </html>
