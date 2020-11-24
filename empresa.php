@@ -21,12 +21,12 @@
   
       <div class="formulario">
       <form>
-          <p>Nome:</p>
-          <input class="caixanome" type="text" method="POST" />
+          <p>Nome da empresa:</p>
+          <input class="caixanome" type="text" method="POST" placeholder="Digite o nome da sua empresa" />
           <p>E-mail:</p>
-          <input class="caixaemail" type="email" method="POST" />
+          <input class="caixaemail" type="email" method="POST" placeholder="Digite o e-mail da sua empresa" />
           <p>Senha:</p>
-          <input class="caixasenha" type="password" method="POST" />
+          <input class="caixasenha" type="password" method="POST" placeholder="Digite a senha da sua empresa" />
           <p class="textosenha">Use 8 ou mais caracteres para sua senha, faça uma mistura de letras, números & símbolos.</p>
       </form>
       </div>
@@ -34,7 +34,7 @@
       <div>
         <button class="botaoconfirma" type="submit">Vamos começar a divulgar</button>
         <p class="textodownbotao">Ao se cadastrar, você está concordando com os <a class="linksdownbotao" href="#">Termos de Uso</a> 
-          Clique Vagas Caruaru e <a class="linksdownbotao" href="#">Políticas de Privacidade.</a></p>
+          <br/> Clique Vagas Caruaru e <a class="linksdownbotao" href="#">Políticas de Privacidade.</a></p>
         <p class="pjatemconta">Já possui conta?<a class="linksdownbotao" href="#"> Clique aqui para se logar!</a></p>
       </div>
   
