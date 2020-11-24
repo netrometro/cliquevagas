@@ -10,6 +10,9 @@ if (!isset($_POST['busca']) || $_POST['busca'] == "") {
 }
 
 $resultado = banco($sql);
+
+$vagas = pg_num_rows($resultado);
+
 /*
 while ($row = pg_fetch_row($resultado)) {
   echo "Author: $row[0]  E-mail: $row[1]";
