@@ -46,15 +46,15 @@ require("model/pesquisar_anuncio.php");
         </div>
 
         <div class="resultado">
-          <p class="mensagem">Vagas 000</p>
-<?php while ($row = pg_fetch_row($resultado)) { ?>
+          <p class="mensagem">Vagas <?= $vagas ?></p>
+<?php while ($row = pg_fetch_assoc($resultado)) { ?>
           <div class="container card">
             <p>Vencimento dia 27/12/2020</p>
             <h3>......</h3>
 
-            <h4><?= $row[1] ?></h4>
+            <h4><?= $row['precisase'] ?></h4>
 
-            <p><?= $row[2] ?></p>
+            <p><?= $row['descricao'] ?></p>
 
             <p><strong>Contato:</strong></p>
             
