@@ -1,11 +1,11 @@
-<?php
-require('persistency/db.php');
-
-// Verifica se os post existem e se tem valores
-
-// Escreve o SQL
-// Salva no banco
-
-// redireciona para a página de perfil.php
-// header("Location: perfil.php");
+<?php 
+/* SOLICITANDO ARQUIVO DE CONEXÃO COM O BANCO */
+require("persistency/db.php");
+    $nome = $_POST['empresa'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $sql = "INSERT INTO empresa (nome, email, senha)";
+    $sql .= " VALUES ('$nome', '$email', '$senha');";
+    $resultado = banco($sql);
+    header("Location: ../listaranuncio.php ")
 ?>
