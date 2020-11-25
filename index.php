@@ -27,8 +27,8 @@ require("model/pesquisar_anuncio.php");
 
       <div class="conteudo">
         <div class="menu" <?= ($busca) ? 'style="display:none"' : "" ?> >
-          <a class="botao bg3" href="login.php">Entrar como empresa</a>
-          <a class="botao bg4" href="empresa.php">Cadastrar empresa</a>
+          <a class="botao bg3" href="login.html">Entrar como empresa</a>
+          <a class="botao bg4" href="empresa.html">Cadastrar empresa</a>
         </div>
 
         <div class="pesquisa">
@@ -49,11 +49,11 @@ require("model/pesquisar_anuncio.php");
           <p class="mensagem">Vagas <?= $vagas ?></p>
 <?php while ($row = pg_fetch_assoc($resultado)) { ?>
           <div class="container card">
-            <p>Vencimento dia 27/12/2020</p>
+            <p>Vencimento <?= $row['data_vencimento'] ?>0</p>
             <h3>......</h3>
 
             <h4><?= $row['precisase'] ?></h4>
-
+            
             <p><?= $row['descricao'] ?></p>
 
             <p><strong>Contato:</strong></p>

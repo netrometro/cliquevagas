@@ -3,7 +3,7 @@
 require("model/persistency/db.php");
 
 /* DELETAR TABELA CASO EXISTIR empresa */
-banco("DROP TABLE IF EXISTS empresa");
+banco("DROP TABLE IF EXISTS empresa CASCADE");
 /* PRINTAR SE A TABELA FOI APAGADA */
 echo "<p>Tabela Empresa apagada com sucesso !</p>";
 /* CRIAR TABELA E POPULAR COM VALORES */
@@ -31,22 +31,27 @@ banco("DROP TABLE IF EXISTS anuncios");
 echo "<p>Tabela Anuncios apagada com sucesso !</p>";
 $sql ="CREATE TABLE anuncios(";
 $sql .="codigo SERIAL NOT NULL,";
+$sql .="codigo_empresa INTEGER NOT NULL,";
 $sql .="precisase VARCHAR(250),";
 $sql .="descricao VARCHAR(400),";
 $sql .="telefone VARCHAR(100),";
 $sql .="email VARCHAR(100),";
 $sql .="endereco VARCHAR(100),";
 $sql .="data_insercao DATE NOT NULL DEFAULT CURRENT_DATE,";
-$sql .="data_vencimento DATE NOT NULL";
+$sql .="data_vencimento DATE NOT NULL,";
+$sql .="PRIMARY KEY(codigo), ";
+$sql .="FOREIGN KEY (codigo_empresa) REFERENCES empresa (codigo)";
 $sql .=");";
 /* PASSANDO O PARAMETRO SQL PARA FUNÇÃO BANCO */
 banco($sql);
 echo "<p>Tabela Anuncios criada com sucesso !</p>";
 /* POPULANDO TABELA */
-$sql ="INSERT INTO anuncios (precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
-$sql .="VALUES ('Barbeiro', 'Precisa-se de barbeiro experiente.', '8198772364', 'barbershop@barber.com', 'Rua campo novo 199', '2020-10-23', '2020-12-25');";
-$sql .="INSERT INTO anuncios (precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
-$sql .="VALUES ('Mecanico', 'Precisa-se de Mecanico Maneta.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', '1500-09-24', '2020-12-25');";
+$sql ="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
+$sql .="VALUES (1, 'Barbeiro', 'Precisa-se de barbeiro experiente.', '8198772364', 'barbershop@barber.com', 'Rua campo novo 199', '2020-10-23', '2020-12-25');";
+$sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
+$sql .="VALUES (2, 'Mecanico', 'Precisa-se de Mecanico Maneta.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', '1500-09-24', '2020-12-25');";
+$sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
+$sql .="VALUES (2, 'Auxiliar de limpeza', 'Experiência de 3 anos.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', '1500-09-24', '2020-12-25');";
 banco($sql);
 echo "<p>Tabela Anuncios populada com sucesso ! </p>";
 /* DELETAR TABELA CASO EXISTIR favbusca*/
