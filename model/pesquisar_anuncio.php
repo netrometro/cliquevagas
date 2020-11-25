@@ -6,7 +6,7 @@ if (!isset($_POST['busca']) || $_POST['busca'] == "") {
   $sql = "SELECT * FROM anuncios";
 } else {
   // Se tiver busca, faz a pesquisa
-  $sql = "SELECT * FROM anuncios WHERE precisase LIKE '%" . $_POST["busca"] . "%'";
+  $sql = "SELECT * FROM anuncios WHERE precisase ILIKE '%" . $_POST["busca"] . "%'";
 }
 
 $resultado = banco($sql);
