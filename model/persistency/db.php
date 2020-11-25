@@ -1,8 +1,11 @@
 <?php
+//putenv("DATABASE_URL=host=localhost port=5432 dbname=postgres");
+//echo getenv("DATABASE_URL");
+
 /* CONEXÃO DE BANCO SQL */
 function banco($sql){
   /* ESTABELECENDO CONEXÃO UTILIZANDO VARIÁVEIS DE AMBIENTE */
-  $conn= pg_connect(getenv("DATABASE_URL"));
+  $conn = pg_connect(getenv("DATABASE_URL"));
   if (!$conn)
     die ("Erro conexão com o banco. < /br>");
   /* ESTABELECENDO RESULTADO PARA CONEXÃO EM CASO DE ERRO */

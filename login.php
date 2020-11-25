@@ -21,17 +21,17 @@
 
         <div class="formulario">
           <form>
-              <p>E-mail:</p>
-              <input class="caixaemail" type="email" method="POST" />
-              <p>Senha:</p>
-              <input class="caixasenha" type="password" method="POST" />
+              <p class="nameemail">E-mail:</p>
+              <input class="caixaemail" type="email" method="POST" placeholder="Digite o email da empresa" />
+              <p class="namesenha">Senha:</p>
+              <input class="caixasenha" type="password" method="POST" placeholder="Digite a senha da empresa" />
           </form>
         </div>
 
         <div>
           <button class="botaoconfirma" type="submit">Entrar</button>
-          <p class="textodownbotao">Esqueceu sua senha?<a class="linksdownbotao" href="#"> Clique aqui para recuperar.</a></p>
-          <p class="pjatemconta">Não possui conta?<a class="linksdownbotao" href="#"> Clique aqui para se cadastrar.</a></p>
+          <p class="textodownbotao">Esqueceu sua senha?<br /><a class="linksdownbotao" href="#">Clique aqui para recuperar.</a></p>
+          <p class="pjatemconta">Não possui conta?<br /><a class="linksdownbotao" href="#"> Clique aqui para se cadastrar.</a></p>
         </div>
 
       </div>

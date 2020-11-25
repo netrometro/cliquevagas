@@ -1,0 +1,187 @@
+p, h3, h4  {
+    margin: 10px 20px;
+}
+
+h3, h4 {
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.caixaprecisase {
+    width: 270px;
+    height: 20px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.caixadescricao {
+    width: 270px;
+    height: 20px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.caixatelefone {
+    width: 270px;
+    height: 20px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.caixaemail {
+    width: 270px;
+    height: 20px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.caixasite {
+    width: 270px;
+    height: 20px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.caixaendereco {
+    width: 270px;
+    height: 20px;
+    display: flex;
+    background-color: #ccc;
+    margin: 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.slider {
+    -webkit-appearance: none;
+    margin: 5px 20px;
+    width: 270px;
+    height: 20px;
+    border-radius: 5px;  
+    background: #ccc;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #3C2F2F;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #3C2F2F;
+    cursor: pointer;
+  }
+
+  .botoes {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: -50px;
+      align-items: center;
+      text-align: center;
+  }
+
+  .botaocancelar {
+    background-color: transparent;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: #3C2F2F;
+    margin-left: 20px;
+  }
+
+  .botaopostar {
+    background-color: #3C2F2F;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: white;
+    margin-left: 40px;
+  }
+/*
+  @media screen and (min-width: 480px) {
+
+    p, h4, h3 {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .caixaprecisase {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .caixadescricao {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .caixatelefone {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .caixaemail {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .caixasite {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .caixaendereco {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slider {
+        width: 500px;
+        margin-left: 420px;
+        margin-bottom: auto;
+    }
+}
+*/

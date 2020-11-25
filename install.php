@@ -1,7 +1,8 @@
 <?php 
 /* SOLICITANDO ARQUIVO DE CONEXÃO COM O BANCO */
-require("db.php");
-/* DELETAR TABELA CASO EXISTER empresa */
+require("model/persistency/db.php");
+
+/* DELETAR TABELA CASO EXISTIR empresa */
 banco("DROP TABLE IF EXISTS empresa");
 /* PRINTAR SE A TABELA FOI APAGADA */
 echo "<p>Tabela Empresa apagada com sucesso !</p>";
@@ -16,6 +17,7 @@ $sql .= ");";
 /* PASSANDO O PARAMETRO SQL PARA FUNÇÃO BANCO */
 banco($sql);
 echo "<p>Tabela Empresa criada com sucesso !</p>";
+/* POPULANDO TABELA */
 $sql = "INSERT INTO empresa (nome, email, senha) ";
 $sql .= "VALUES ('SENAC Caruaru', 'caruaru@senac.com', '1');";
 $sql .= "INSERT INTO empresa (nome, email, senha) ";
@@ -23,7 +25,7 @@ $sql .= "VALUES ('SENAC Recife', 'recife@senac.com', '2');";
 /* PASSANDO O PARAMETRO SQL PARA FUNÇÃO BANCO E POPULANDO A TABELA */
 banco($sql);
 echo "<p>Tabela Empresa populada com sucesso ! </p>";
-/* DELETAR TABELA CASO EXISTER anuncios */
+/* DELETAR TABELA CASO EXISTIR anuncios */
 banco("DROP TABLE IF EXISTS anuncios");
 /* PRINTAR SE A TABELA FOI APAGADA */
 echo "<p>Tabela Anuncios apagada com sucesso !</p>";
@@ -34,19 +36,36 @@ $sql .="descricao VARCHAR(400),";
 $sql .="telefone VARCHAR(100),";
 $sql .="email VARCHAR(100),";
 $sql .="endereco VARCHAR(100),";
-$sql .="tempo DATE NOT NULL DEFAULT CURRENT_DATE";
+$sql .="data_insercao DATE NOT NULL DEFAULT CURRENT_DATE,";
+$sql .="data_vencimento DATE NOT NULL";
 $sql .=");";
 /* PASSANDO O PARAMETRO SQL PARA FUNÇÃO BANCO */
 banco($sql);
 echo "<p>Tabela Anuncios criada com sucesso !</p>";
-$sql ="INSERT INTO anuncios (precisase, descricao, telefone, email, endereco, tempo) ";
-$sql .="VALUES ('Barbeiro', 'Precisa-se de barbeiro experiente.', '8198772364', 'barbershop@barber.com', 'Rua campo novo 199', '2020-10-23');";
+/* POPULANDO TABELA */
+$sql ="INSERT INTO anuncios (precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
+$sql .="VALUES ('Barbeiro', 'Precisa-se de barbeiro experiente.', '8198772364', 'barbershop@barber.com', 'Rua campo novo 199', '2020-10-23', '2020-12-25');";
+$sql .="INSERT INTO anuncios (precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
+$sql .="VALUES ('Mecanico', 'Precisa-se de Mecanico Maneta.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', '1500-09-24', '2020-12-25');";
 banco($sql);
 echo "<p>Tabela Anuncios populada com sucesso ! </p>";
-/* DELETAR TABELA CASO EXISTER anuncios */
-banco("DROP TABLE IF EXISTS favorito");
-/* PRINTAR SE A TABELA FOI APAGADA */
-echo "<p>Tabela Favorito apagada com sucesso !</p>";
-$sql =""
+/* DELETAR TABELA CASO EXISTIR favbusca*/
+banco ("DROP TABLE IF EXISTS favbusca");
+/* PRINTAR SE A TABELA FOI APAGADA  */
+echo "<p>Tabela Busca Favorita(favbusca) apagada com sucesso !</p>";
+$sql ="CREATE TABLE favbusca(";
+$sql .="email VARCHAR(100),";
+$sql .="buscaFavorita VARCHAR(100)";
+$sql .=");";
+/* PASSANDO O PARAMETRO SQL PARA FUNÇÃO BANCO */
+banco($sql);
+echo "<p>Tabela Busca Favorita(favbusca) criada com sucesso ! </p>";
+/* POPULANDO TABELA */
+$sql ="INSERT INTO favbusca (email, buscaFavorita) ";
+$sql .="VALUES ('fabinhomotorista@gmail.com', 'Vaga para motorista');";
+$sql .="INSERT INTO favbusca (email, buscaFavorita) ";
+$sql .="VALUES ('higor@gmail.com', 'Vaga para Analista de T.I');";
+banco($sql);
+echo "<p>Tabela Busca Favorita(favbusca) populada com sucesso ! </p>";
 
 ?>

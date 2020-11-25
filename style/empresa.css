@@ -128,4 +128,32 @@
     color: #BE9B7B;
     text-align: center;
   }
+<<<<<<< HEAD
   
+=======
+  
+  @media screen and (min-width: 480px) {
+      .caixanome {
+        width: 500px;
+        margin: 5px auto;
+      }
+
+      .caixaemail {
+        width: 500px;
+        margin: 5px auto;
+    }
+    
+    .caixasenha {
+      width: 500px;
+      margin: 5px auto;
+    }
+
+    p {
+      margin: 30px 430px 0px 430px;
+    }
+
+    .textosenha {
+      margin-top: 0px;
+    }
+  }
+>>>>>>> upstream/master
