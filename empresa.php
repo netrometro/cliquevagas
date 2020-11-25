@@ -20,19 +20,18 @@
       </div>
   
       <div class="formulario">
-      <form>
-          <p>Nome da empresa:</p>
-          <input class="caixanome" type="text" method="POST" placeholder="Digite o nome da sua empresa" />
+      <form method="POST" action="model/cadastrar_empresa.php">
+          <p>Nome da empresa.:</p>
+          <input class="caixanome" type="text" name="nome" placeholder="Digite o nome da sua empresa" />
           <p>E-mail:</p>
-          <input class="caixaemail" type="email" method="POST" placeholder="Digite o e-mail da sua empresa" />
+          <input class="caixaemail" type="email" name="email" placeholder="Digite o e-mail da sua empresa" />
           <p>Senha:</p>
-          <input class="caixasenha" type="password" method="POST" placeholder="Digite a senha da sua empresa" />
+          <input class="caixasenha" type="password" name="senha" placeholder="Digite a senha da sua empresa" />
           <p class="textosenha">Use 8 ou mais caracteres para sua senha, faça uma mistura de letras, números & símbolos.</p>
+          <button class="botaoconfirma" type="submit" >Vamos começar a divulgar</button>
       </form>
       </div>
-  
       <div>
-        <button class="botaoconfirma" type="submit">Vamos começar a divulgar</button>
         <p class="textodownbotao">Ao se cadastrar, você está concordando com os <a class="linksdownbotao" href="#">Termos de Uso</a> 
           <br/> Clique Vagas Caruaru e <a class="linksdownbotao" href="#">Políticas de Privacidade.</a></p>
         <p class="pjatemconta">Já possui conta?<a class="linksdownbotao" href="#"> Clique aqui para se logar!</a></p>

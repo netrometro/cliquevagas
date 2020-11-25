@@ -1,7 +1,7 @@
 <?php 
 /* SOLICITANDO ARQUIVO DE CONEXÃO COM O BANCO */
 require("persistency/db.php");
-    $nome = $_POST['empresa'];
+    $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $sql = "INSERT INTO empresa (nome, email, senha)";
