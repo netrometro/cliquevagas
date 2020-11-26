@@ -11,11 +11,7 @@
     <div class="container">
       <div class="titulo bg1">
         <a href="index.php"> <img   src="images/logo.png" /></a>
-<<<<<<< HEAD
       <a class="limpartitulo" href="index.php">Click Vagas Caruaru</a>
-=======
-      <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
->>>>>>> ce24efe418f19df3edc34f1331130f502c27c9a0
       </div>
       <div class="conteudo">
         <div class="tema">
