@@ -9,7 +9,7 @@
   </head>
   <body class="bg2">
     <div class="container">
-      <div href="login.html" class="titulo bg1">
+      <div class="titulo bg1">
         <a href="index.php"> <img   src="images/logo.png" /> </a>
       <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
       </div>
@@ -20,11 +20,11 @@
         </div>
 
         <div class="formulario">
-          <form action="controller/login.php" method="POST">
+          <form action="controllers/login.php" method="POST">
               <p class="nameemail">E-mail:</p>
-              <input class="caixaemail" type="email" method="POST" placeholder="Digite o email da empresa" />
+              <input name="email" class="caixaemail" type="email" placeholder="Digite o email da empresa" />
               <p class="namesenha">Senha:</p>
-              <input class="caixasenha" type="password" method="POST" placeholder="Digite a senha da empresa" />
+              <input name="senha" class="caixasenha" type="password" placeholder="Digite a senha da empresa" />
               <button class="botaoconfirma" type="submit">Entrar</button>
           </form>
         </div>

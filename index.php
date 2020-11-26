@@ -26,7 +26,7 @@ require("model/pesquisar_anuncio.php");
 
       <div class="conteudo">
         <div class="menu" <?= ($busca) ? 'style="display:none"' : "" ?> >
-          <a class="botaoconfirma" href="login.html">Entrar como empresa</a>
+          <a class="botaoconfirma" href="login.php">Entrar como empresa</a>
           <a class="botaoconfirma" href="empresa.html">Cadastrar empresa</a>
         </div>
 
