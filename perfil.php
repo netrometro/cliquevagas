@@ -9,7 +9,7 @@
   <body class="bg2">
     <div class="container">
       <div class="titulo bg1">
-      <a href="index.php"> <img   src="images/logo.png" /> </a>
+      <a href="index.php"> <img   src="images/logo.png" /></a>
       <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
       </div>
       <div class="conteudo">
