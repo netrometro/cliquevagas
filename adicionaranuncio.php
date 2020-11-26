@@ -11,7 +11,7 @@
     <div class="container">
       <div class="titulo bg1">
       <a href="index.php"> <img   src="images/logo.png" /> </a>
-      <a href="index.php"> Click Vagas Caruaru</a>
+      <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
       </div>
       <div class="conteudo">
         <h3>Criar anúncio:</h3>

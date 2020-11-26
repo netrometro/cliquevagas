@@ -32,3 +32,8 @@ body, p, input, textarea, a {
   font-family: Roboto, Arial, sans-serif;
   font-size: 28px;
 }
+
+.limpartitulo {
+  text-decoration: none;
+  color: #fff !important;
+}
