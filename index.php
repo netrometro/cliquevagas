@@ -21,14 +21,14 @@ require("model/pesquisar_anuncio.php");
   <body class="bg2">
     <div class="container">
       <div class="titulo bg1">
-        <img src="images/logo.png" /> 
-        Click Vagas Caruaru
+      <a href="index.php"> <img   src="images/logo.png" /> </a>
+      <a href="index.php"> Click Vagas Caruaru</a>
       </div>
 
       <div class="conteudo">
         <div class="menu" <?= ($busca) ? 'style="display:none"' : "" ?> >
-          <a class="botao bg3" href="login.html">Entrar como empresa</a>
-          <a class="botao bg4" href="empresa.html">Cadastrar empresa</a>
+          <a class="botaoconfirma" href="login.html">Entrar como empresa</a>
+          <a class="botaoconfirma" href="empresa.html">Cadastrar empresa</a>
         </div>
 
         <div class="pesquisa">

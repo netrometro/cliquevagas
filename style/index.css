@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/master
 .botao {
   display: block;
   margin: 15px;
@@ -51,8 +47,6 @@
 
 .salvar {
   display: none;
-<<<<<<< HEAD
-=======
 }
 
 
@@ -61,5 +55,4 @@
     max-width: 780px;
     margin: 0px auto;
   }
->>>>>>> upstream/master
 }
