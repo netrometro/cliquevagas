@@ -1,8 +1,10 @@
 <?php
 require("../model/persistency/db.php");
 if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['senha']) && $_POST['senha'] != "" ) {
+    //*//
     $email = pg_escape_string($_POST['email']);
     $senha = pg_escape_string($_POST['senha']);
+    //*/
     $sql = "SELECT * FROM empresa WHERE email='" . $email . "' AND senha='" .$senha . "'";
     $resultado = banco($sql);
     //$sql ="SELECT email, senha FROM empresa WHERE usuario = '" .$email . "' AND senha = '" .$senha ."') AND ('ativo' = 1) LIMIT 1";
