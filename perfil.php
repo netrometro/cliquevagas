@@ -1,3 +1,6 @@
+<?php 
+require("controllers/autentication.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
