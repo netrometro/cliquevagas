@@ -13,7 +13,44 @@
       <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
       </div>
       <div class="conteudo">
-        
+      <a class="botao bg4" href="#">Anunciar</a>
+      
+      <div class="resultado">
+          <div class="container card">
+            <p>Vencimento 0</p>
+            <h3>......</h3>
+
+            <h4>.....</h4>
+            
+            <p>..... </p>
+
+            <p><strong>Contato:</strong></p>
+            
+            <p>caruaru@gmail.com</p>
+            <p>site</p>
+            <p>telefone</p>
+            <p>endereço</p>
+
+          </div>
+
+          <div class="container card inativo">
+            <p>Vencimento 0</p>
+            <h3>......</h3>
+
+            <h4>.....</h4>
+            
+            <p>..... </p>
+
+            <p><strong>Contato:</strong></p>
+            
+            <p>caruaru@gmail.com</p>
+            <p>site</p>
+            <p>telefone</p>
+            <p>endereço</p>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </body>
