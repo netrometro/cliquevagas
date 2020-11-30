@@ -18,8 +18,6 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['pesquisa'])
     echo $sql;
     $resultado = banco($sql);
 }
-$resultado = banco($sql);
-}
 // Verfica se recebe email e pesquisa
 // Procura no banco o email
 // se achar

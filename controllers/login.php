@@ -16,9 +16,11 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['senha']) &&
       // Salva os dados encontados na variável $resultado
       $resultado = pg_fetch_assoc($resultado);
        // Se a sessão não existir, inicia uma
-       if (!isset($_SESSION)) session_start();
-       // Salva os dados encontrados na sessão
-       $_SESSION['usuario'] = $resultado['email'];
+       if (!isset($_SESSION)) {
+            session_start();
+            // Salva os dados encontrados na sessão
+             $_SESSION['usuario'] = $resultado['codigo'];
+       }
        // Redireciona o visitante
        header("Location: perfil.php"); exit;
   }
