@@ -19,7 +19,7 @@ require("controllers/autentication.php");
       <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
       </div>
       <div class="conteudo">
-      <a class="bt_principal" href="#">Anunciar</a>
+      <a class="bt_principal" href="adicionaranuncio.php">Anunciar</a>
       
       <div class="resultado">
           <div class="card">
