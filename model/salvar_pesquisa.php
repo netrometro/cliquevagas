@@ -4,11 +4,13 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['busca']) &&
     $email = pg_escape_string($_POST['email']);
     $busca = pg_escape_string($_POST['busca']);
     
-    $resultado = banco($sql);
+   
 if($resultado){
     $sql = "UPDATE favbusca WHERE email='" . $email . "' SET buscaFavorita='" . $busca . "'" ;
-}else
+}else{
     $sql = "INSERT INTO favbusca VALUES (email, buscaFavorita) " ;
+}
+$resultado = banco($sql);
 }
 // Verfica se recebe email e pesquisa
 // Procura no banco o email
