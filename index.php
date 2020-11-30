@@ -40,8 +40,15 @@ require("model/pesquisar_anuncio.php");
           <p class="mensagem">Vagas <?= $vagas ?></p>
 <?php while ($row = pg_fetch_assoc($resultado)) { ?>
           <div class="container card">
-            <p>Vencimento <?= $row['data_vencimento'] ?></p>
-            <h3>......</h3>
+            <div class="empresaedata">
+              <div class="nomeempresa">
+                <h3>......</h3>
+              </div> 
+              <div class="datavencimento">             
+                <p>Vencimento <?= $row['data_vencimento'] ?></p>
+              </div>
+            </div>
+            
             <h4><?= $row['precisase'] ?></h4>           
             <p><?= $row['descricao'] ?></p>
             <p><strong>Contato:</strong></p>    
