@@ -22,17 +22,9 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['senha']) &&
              $_SESSION['usuario'] = $resultado['codigo'];
        }
        // Redireciona o visitante
-       header("Location: perfil.php"); exit;
+       header("Location: ../perfil.php"); exit;
   }
 }else{
     header("Location: ../error/login.html"); 
 }
-// RECEBE O $_POST
-// vERIFICA
-// PROCURA NO BANCO
-// SE EXISTIR 
-//    REGISTRA NA SESSION O EMAIL
-//    DIRECIONA PARA O PERFIL.PHP
-// SENÃO 
-//    DIRECIONA PARA A PÁGINA ERROR_LOGIN.HTML
 ?>
