@@ -80,7 +80,7 @@ if (isset($resultado)) {
   </body>
 
 <?php
-session_start()
+session_start();
 
 if (isset($_SESSION['resultado']) and $_SESSION['resultado'] != "") {
   $resultado = $_SESSION['resultado'];
