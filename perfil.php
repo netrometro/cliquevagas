@@ -7,6 +7,9 @@ $sql = "SELECT nome FROM empresa WHERE codigo=" . $_SESSION['usuario'];
 $resultado = banco($sql);
 $resultado = pg_fetch_assoc($resultado);
 $empresa = $resultado['nome'];
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
