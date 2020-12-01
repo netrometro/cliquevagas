@@ -38,7 +38,7 @@ require("controllers/autentication.php");
             <p>Dias: <span id="demo"></span></p>
           </div>
           <div class="botoes">
-          <button class="botaocancelar" type="button" onclick="">Cancelar</button>
+          <a class="botaocancelar" type="button" href="perfil.php">Cancelar</button>
           <input class="botaopostar" type="submit" value="Salvar pesquisa" />
           </div>
         </form>
