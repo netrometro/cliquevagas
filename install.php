@@ -36,8 +36,8 @@ $sql .="precisase VARCHAR(250),";
 $sql .="descricao VARCHAR(400),";
 $sql .="telefone VARCHAR(100),";
 $sql .="email VARCHAR(100),";
-$sql .="endereco VARCHAR(255),
-$sql .="site VARCHAR(255),"";
+$sql .="endereco VARCHAR(255),";
+$sql .="site VARCHAR(255),";
 $sql .="data_insercao DATE NOT NULL DEFAULT CURRENT_DATE,";
 $sql .="data_vencimento DATE NOT NULL,";
 $sql .="PRIMARY KEY(codigo), ";
@@ -49,10 +49,10 @@ echo "<p>Tabela Anuncios criada com sucesso !</p>";
 /* POPULANDO TABELA */
 $sql ="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, endereco, site, data_insercao, data_vencimento) ";
 $sql .="VALUES (1, 'Barbeiro', 'Precisa-se de barbeiro experiente.', '8198772364', 'barbershop@barber.com', 'Rua campo novo 199', 'www.barber.com', '2020-10-23', '2020-12-25');";
-$sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
-$sql .="VALUES (2, 'Mecanico', 'Precisa-se de Mecanico Maneta.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55','www.seucraudio.com',  '1500-09-24', '2020-12-25');";
-$sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, endereco, data_insercao, data_vencimento) ";
-$sql .="VALUES (2, 'Auxiliar de limpeza', 'Experiência de 3 anos.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55','www.seucradio.com',  '1500-09-24', '2020-12-25');";
+$sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, site, endereco, data_insercao, data_vencimento) ";
+$sql .="VALUES (2, 'Mecanico', 'Precisa-se de Mecanico Maneta.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', 'www.seucraudio.com', '1500-09-24', '2020-12-25');";
+$sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, site, endereco, data_insercao, data_vencimento) ";
+$sql .="VALUES (2, 'Auxiliar de limpeza', 'Experiência de 3 anos.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', 'www.seucradio.com', '1500-09-24', '2020-12-25');";
 banco($sql);
 echo "<p>Tabela Anuncios populada com sucesso ! </p>";
 /* DELETAR TABELA CASO EXISTIR favbusca*/
