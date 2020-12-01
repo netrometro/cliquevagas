@@ -35,7 +35,7 @@ $empresa = $resultado['nome'];
       <div class="resultado">
           <div class="card">
             <div class="col c1">
-              <a href="#"><i class="material-icons">edit</i></a>
+              <a href="alteraranuncio.php"><i class="material-icons">edit</i></a>
             </div>
             <div class="col c2">
               <p>SENAC</p>

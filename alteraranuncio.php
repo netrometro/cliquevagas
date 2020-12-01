@@ -1,13 +1,15 @@
 <?php 
 require("controllers/autentication.php");
 
-    $precisase = pg_escape_string($_POST['precisase']);
-    $descricao = pg_escape_string($_POST['descricao']);
-    $telefone = pg_escape_string($_POST['telefone']);
-    $email = pg_escape_string($_POST['email']);
-    $endereco = pg_escape_string($_POST['endereco']);
-    $datainsercao = pg_escape_string($_POST['data_insercao']);
-    $datavencimento = pg_escape_string($_POST['data_vencimento']);
+$sql = "SELECT * FROM anuncio WHERE codigo=" . $_GET['anuncio'];
+$resultado = banco($sql);
+$resultado = pg_fetch_assoc($resultado);
+$precisase = $resultado['precisase'];
+$descricao = $resultado['descricao'];
+$telefone = $resultado['telefone'];
+$email = $resultado['email'];
+$site = $resultado['site'];
+$endereco = $resultado['endereco'];
 
 ?>
 <!DOCTYPE html>
@@ -38,7 +40,7 @@ require("controllers/autentication.php");
           <p>E-mail:</p>
           <input class="caixaemail" type="email" method="POST" value="<?php $email ?>" />
           <p>Site:</p>
-          <input class="caixasite" type="url" method="POST" value="<?php  ?>" />
+          <input class="caixasite" type="url" method="POST" value="<?php $site ?>" />
           <p>Endereço da empresa:</p>
           <input class="caixaendereco" type="text" method="POST" value="<?php $endereco ?>" />
           <h4>Tempo de anúncio:</h4>
