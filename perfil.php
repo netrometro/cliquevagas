@@ -11,7 +11,6 @@ $empresa = $resultado['nome'];
 $sql = "SELECT * FROM anuncios WHERE codigo_empresa=" . $_SESSION['usuario'];
 $resultado = banco($sql);
 //$resultado = pg_fetch_assoc($resultado);
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,8 +36,11 @@ $resultado = banco($sql);
       <div class="resultado">
 
 <?php while ($row = pg_fetch_assoc($resultado)) { 
- $inativo = false;
- // Verifica a data de vencimento, se for menor que a data de hoje $inativo = true
+          // Verifica a data de vencimento, se for menor que a data de hoje $inativo = true
+          $inativo = false;
+          if (date("Y-m-d") > $row['data_vencimento']) {
+            $inativo = true;
+          }
 ?>
 
           <div class="card  <?= ($inativo) ? 'inativo' : '' ?>">
