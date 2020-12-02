@@ -7,10 +7,11 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['pesquisa'])
      $sql = "UPDATE IF EXISTS email='" . $email . "' AND buscaFavorita='" . $pesquisa . "'"; 
      $resultado = banco($sql);
     if($resultado){
+        $sql = "INSERT INTO favbusca (email, buscaFavorita) VALUES ('" . $email . "', '" . $pesquisa . "')" ;
+        header("Location: ../pesquisa_salva.html");
    }else {
-    $sql = "INSERT INTO favbusca (email, buscaFavorita) VALUES ('" . $email . "', '" . $pesquisa . "')" ;
+    echo "<p>Erro ! </p>";
     }
     $resultado = banco($sql);
 }
-header("Location: ../pesquisa_salva.html");
 ?>
