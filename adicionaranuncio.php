@@ -39,7 +39,7 @@ require("controllers/autentication.php");
           </div>
           <div class="botoes">
           <a class="botaocancelar" type="button" href="perfil.php">Cancelar</button>
-          <input class="botaopostar" type="submit" value="Salvar pesquisa" />
+          <input class="botaopostar" type="submit" value="Salvar anúncio" />
           </div>
         </form>
       </div>

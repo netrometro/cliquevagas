@@ -1,7 +1,8 @@
 <?php 
 require("controllers/autentication.php");
+require("model/persistency/db.php");
 
-$sql = "SELECT * FROM anuncio WHERE codigo=" . $_GET['anuncio'];
+$sql = "SELECT * FROM anuncios WHERE codigo= " . $_GET['anuncio'];
 $resultado = banco($sql);
 $resultado = pg_fetch_assoc($resultado);
 $precisase = $resultado['precisase'];
@@ -50,7 +51,7 @@ $endereco = $resultado['endereco'];
           </div>
           <div class="botoes">
           <a class="botaocancelar" type="button" href="perfil.php">Cancelar</button>
-          <input class="botaopostar" type="submit" value="Salvar pesquisa" />
+          <input class="botaopostar" type="submit" value="Salvar anúncio" />
           </div>
         </form>
       </div>

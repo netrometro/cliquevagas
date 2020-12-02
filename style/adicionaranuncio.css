@@ -1,3 +1,4 @@
+
 p, h3, h4  {
     margin: 10px 20px;
 }
@@ -132,49 +133,74 @@ h3, h4 {
     color: white;
     margin-left: 40px;
   }
-/*
+
   @media screen and (min-width: 480px) {
 
-    p, h4, h3 {
-        width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     .caixaprecisase {
         width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 20px;
+        display: flex;
+        background-color: #ccc;
+        margin: 5px auto;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
     }
     
     .caixadescricao {
         width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 20px;
+        display: flex;
+        background-color: #ccc;
+        margin: 5px auto;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
     }
     
     .caixatelefone {
         width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 20px;
+        display: flex;
+        background-color: #ccc;
+        margin: 5px auto;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
     }
     
     .caixaemail {
         width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 20px;
+        display: flex;
+        background-color: #ccc;
+        margin: 5px auto;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
     }
     
     .caixasite {
         width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 20px;
+        display: flex;
+        background-color: #ccc;
+        margin: 5px auto;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
     }
     
     .caixaendereco {
         width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 20px;
+        display: flex;
+        background-color: #ccc;
+        margin: 5px auto;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
     }
 
     .slider {
@@ -182,5 +208,9 @@ h3, h4 {
         margin-left: 420px;
         margin-bottom: auto;
     }
+
+    p {
+        margin-left: 430px;
+    }
+
 }
-*/
