@@ -1,5 +1,14 @@
 <?php 
 require("controllers/autentication.php");
+
+    $precisase = pg_escape_string($_POST['precisase']);
+    $descricao = pg_escape_string($_POST['descricao']);
+    $telefone = pg_escape_string($_POST['telefone']);
+    $email = pg_escape_string($_POST['email']);
+    $endereco = pg_escape_string($_POST['endereco']);
+    $datainsercao = pg_escape_string($_POST['data_insercao']);
+    $datavencimento = pg_escape_string($_POST['data_vencimento']);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,18 +29,18 @@ require("controllers/autentication.php");
         <h3>Criar anúncio:</h3>
         <form>
           <p>Precisa-se:</p>
-          <input class="caixaprecisase" type="text" method="POST" placeholder="Digite o Título da vaga"/>
+          <input class="caixaprecisase" type="text" method="POST" value="<?php $precisase ?>"/>
           <p>Descrição da vaga:</p>
-          <input class="caixadescricao" type="text" method="POST" placeholder="Digite a descrição da vaga"/>
+          <input class="caixadescricao" type="text" method="POST" value="<?php $descricao ?>" />
           <h4>Contatos:</h4>
           <p>Telefone:</p>
-          <input class="caixatelefone" type="tel" method="POST" placeholder="Digite o telefone para contato"/>
+          <input class="caixatelefone" type="tel" method="POST" value="<?php $telefone ?>" />
           <p>E-mail:</p>
-          <input class="caixaemail" type="email" method="POST" placeholder="Digite o e-mail para contato"/>
+          <input class="caixaemail" type="email" method="POST" value="<?php $email ?>" />
           <p>Site:</p>
-          <input class="caixasite" type="url" method="POST" placeholder="Digite o site para contato"/>
+          <input class="caixasite" type="url" method="POST" value="<?php  ?>" />
           <p>Endereço da empresa:</p>
-          <input class="caixaendereco" type="text" method="POST" placeholder="Digite o endereço para contato"/>
+          <input class="caixaendereco" type="text" method="POST" value="<?php $endereco ?>" />
           <h4>Tempo de anúncio:</h4>
           <div class="slidecontainer">
             <input type="range" min="1" max="30" value="30" class="slider" id="myRange">

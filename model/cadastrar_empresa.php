@@ -7,5 +7,5 @@ require("persistency/db.php");
     $sql = "INSERT INTO empresa (nome, email, senha)";
     $sql .= " VALUES ('$nome', '$email', '$senha');";
     $resultado = banco($sql);
-    header("Location: ../listaranuncio.php ")
+    header("Location: ../login.php ");
 ?>

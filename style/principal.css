@@ -37,3 +37,8 @@ body, p, input, textarea, a {
   text-decoration: none;
   color: #fff !important;
 }
+
+.empresa {
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,5 +1,17 @@
 <?php 
 require("controllers/autentication.php");
+
+require("model/persistency/db.php");
+
+$sql = "SELECT nome FROM empresa WHERE codigo=" . $_SESSION['usuario'];
+$resultado = banco($sql);
+$resultado = pg_fetch_assoc($resultado);
+$empresa = $resultado['nome'];
+
+$sql = "SELECT * FROM anuncio WHERE codigo_empresa=" . $_SESSION['usuario'];
+$resultado = banco($sql);
+//$resultado = pg_fetch_assoc($resultado);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,31 +31,39 @@ require("controllers/autentication.php");
       <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
       </div>
       <div class="conteudo">
-      <a class="bt_principal" href="#">Anunciar</a>
+      <h3 class="empresa"><?= $empresa ?></h3>
+      <a class="bt_principal" href="adicionaranuncio.php">Anunciar</a>
       
       <div class="resultado">
-          <div class="card">
+
+<?php while ($row = pg_fetch_assoc($resultado)) { 
+ $inativo = false;
+ // Verifica a data de vencimento, se for menor que a data de hoje $inativo = true
+?>
+
+          <div class="card  <?= ($inativo) ? 'inativo' : '' ?>">
             <div class="col c1">
               <a href="#"><i class="material-icons">edit</i></a>
             </div>
             <div class="col c2">
-              <p>SENAC</p>
-              <p>27/11/2020</p>
-              <p>Descrição...</p>
+              <p><?= $row['precisase'] ?></p>
+              <p><?= $row['data_vencimento'] ?></p>
+              <p><?= $row['descricao'] ?></p>
               <p><strong>Contato:</strong></p>
-              <p>caruaru@gmail.com</p>
-              <p>site</p>
-              <p>telefone</p>
-              <p>endereço</p>
+              <p><?= $row['email'] ?></p>
+              <p><?= $row['site'] ?></p>
+              <p><?= $row['telefone'] ?></p>
+              <p><?= $row['endereco'] ?></p>
             </div>
             <div class="col c3">
               <a href="#"><i class="material-icons">cancel</i></a>
             </div>
           </div>
+<?php } ?>
 
           <div class="card inativo">
             <div class="col c1">
-              <a href="#"><i class="material-icons">edit</i></a>
+              <a href="model/cancelar_anuncio.php?codigo=  <?= 1 ?>"><i class="material-icons">edit</i></a>
             </div>
             <div class="col c2">
               <p>SENAC</p>

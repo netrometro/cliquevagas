@@ -11,7 +11,7 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['senha']) &&
     //banco($sql);
     if (pg_num_rows($resultado) != 1) {
         // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
-        echo "Login inválido!"; exit;
+        header("Location: ../error_login.html"); 
     } else {
       // Salva os dados encontados na variável $resultado
       $resultado = pg_fetch_assoc($resultado);
@@ -22,17 +22,9 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['senha']) &&
              $_SESSION['usuario'] = $resultado['codigo'];
        }
        // Redireciona o visitante
-       header("Location: perfil.php"); exit;
+       header("Location: ../perfil.php"); exit;
   }
 }else{
-    header("Location: ../error/login.html"); 
+    header("Location: ../error_login.html"); 
 }
-// RECEBE O $_POST
-// vERIFICA
-// PROCURA NO BANCO
-// SE EXISTIR 
-//    REGISTRA NA SESSION O EMAIL
-//    DIRECIONA PARA O PERFIL.PHP
-// SENÃO 
-//    DIRECIONA PARA A PÁGINA ERROR_LOGIN.HTML
 ?>
