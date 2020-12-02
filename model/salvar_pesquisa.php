@@ -7,12 +7,11 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['pesquisa'])
     $resultado = banco($sql);
     if(pg_num_rows($resultado) > 0){
         $sql = "UPDATE favbusca SET buscaFavorita = '$pesquisa' WHERE email = '$email';" ;
-        $resultado = banco($sql);
-        header("Location: ../pesquisa_salva.html");     
+        $resultado = banco($sql);   
     } else {
         $sql = "INSERT INTO favbusca (email, buscaFavorita) VALUES ('$email', '$pesquisa')" ;
         $resultado = banco($sql);
-        header("Location: ../pesquisa_salva.html");
     }
 }
+header("Location: ../pesquisa_salva.html");
 ?>
