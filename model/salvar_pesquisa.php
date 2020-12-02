@@ -5,8 +5,8 @@ $pesquisa = pg_escape_string($_POST['pesquisa']);
     if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['pesquisa']) && $_POST['pesquisa'] != "" ) {
         $sql = "SELECT * FROM favbusca WHERE email ILIKE '%" . $_POST["email"] . "%'";
         $resultado = banco($sql);
-        $row = pg_fetch_assoc($resultado);
-        if( $row = pg_fetch_assoc($resultado){
+        $consulta = $resultado;
+        if($consulta = $resultado){
             $sql = "UPDATE INTO favbusca (email, buscaFavorita) VALUES ('" . $email . "', '" . $pesquisa . "')" ;
             $resultado = banco($sql);
             header("Location: ../pesquisa_salva.html");
