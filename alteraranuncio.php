@@ -37,7 +37,7 @@ $endereco = $resultado['endereco'];
           <input class="caixadescricao" type="text" method="POST" value="<?php $descricao ?>" />
           <h4>Contatos:</h4>
           <p>Telefone:</p>
-          <input class="caixatelefone" type="tel" method="POST" value="<?php $telefone ?>" />
+          <input class="caixatelefone" type="tel" data-masck="(00) 00000-0000" data-masck -selectonfocus="true"  value="<?php $telefone ?>" />
           <p>E-mail:</p>
           <input class="caixaemail" type="email" method="POST" value="<?php $email ?>" />
           <p>Site:</p>
