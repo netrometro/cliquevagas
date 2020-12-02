@@ -10,6 +10,11 @@ h3, h4 {
     margin-bottom: 30px;
 }
 
+#max {
+    color: #ccc;
+    font-size: 10px;
+}
+
 .caixaprecisase {
     width: 270px;
     height: 20px;
@@ -133,6 +138,8 @@ h3, h4 {
     color: white;
     margin-left: 40px;
   }
+
+
 
   @media screen and (min-width: 480px) {
 

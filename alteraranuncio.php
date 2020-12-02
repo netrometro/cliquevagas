@@ -33,7 +33,7 @@ $endereco = $resultado['endereco'];
         <form>
           <p>Precisa-se:</p>
           <input class="caixaprecisase" type="text" method="POST" value="<?php $precisase ?>"/>
-          <p>Descrição da vaga:</p>
+          <p>Descrição da vaga: <p id="max">(Max: 140 caracteres)</p></p>
           <input class="caixadescricao" type="text" method="POST" value="<?php $descricao ?>" />
           <h4>Contatos:</h4>
           <p>Telefone:</p>
