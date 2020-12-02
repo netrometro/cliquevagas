@@ -22,8 +22,7 @@ h3, h4 {
 
 .caixadescricao {
     width: 270px;
-    height: 20px;
-    display: flex;
+    height: 60px;
     background-color: #ccc;
     margin: 5px 20px;
     padding: 10px;

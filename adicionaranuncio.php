@@ -18,23 +18,23 @@ require("controllers/autentication.php");
       </div>
       <div class="conteudo">
         <h3>Criar anúncio:</h3>
-        <form>
+        <form method="POST" action="model/salvar_anuncio.php">
           <p>Precisa-se:</p>
-          <input class="caixaprecisase" type="text" method="POST" placeholder="Digite o Título da vaga"/>
+          <input class="caixaprecisase" name="precisase" type="text" placeholder="Digite o Título da vaga"/>
           <p>Descrição da vaga:</p>
-          <input class="caixadescricao" type="text" method="POST" placeholder="Digite a descrição da vaga"/>
+          <textarea class="caixadescricao" name="descricao" placeholder="Digite a descrição da vaga"></textarea>
           <h4>Contatos:</h4>
           <p>Telefone:</p>
-          <input class="caixatelefone" type="tel" method="POST" placeholder="Digite o telefone para contato"/>
+          <input class="caixatelefone" type="tel" name="telefone" placeholder="Digite o telefone para contato"/>
           <p>E-mail:</p>
-          <input class="caixaemail" type="email" method="POST" placeholder="Digite o e-mail para contato"/>
+          <input class="caixaemail" type="email" name="email" placeholder="Digite o e-mail para contato"/>
           <p>Site:</p>
-          <input class="caixasite" type="url" method="POST" placeholder="Digite o site para contato"/>
+          <input class="caixasite" type="url" name="site" placeholder="Digite o site para contato"/>
           <p>Endereço da empresa:</p>
-          <input class="caixaendereco" type="text" method="POST" placeholder="Digite o endereço para contato"/>
+          <input class="caixaendereco" type="text" name="endereco" placeholder="Digite o endereço para contato"/>
           <h4>Tempo de anúncio:</h4>
           <div class="slidecontainer">
-            <input type="range" min="1" max="30" value="30" class="slider" id="myRange">
+            <input name="dias" type="range" min="1" max="30" value="30" class="slider" id="myRange">
             <p>Dias: <span id="demo"></span></p>
           </div>
           <div class="botoes">

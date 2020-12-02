@@ -53,6 +53,8 @@ $sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, em
 $sql .="VALUES (2, 'Mecanico', 'Precisa-se de Mecanico Maneta.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', 'www.seucraudio.com', '1500-09-24', '2020-12-25');";
 $sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, site, endereco, data_insercao, data_vencimento) ";
 $sql .="VALUES (2, 'Auxiliar de limpeza', 'Experiência de 3 anos.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', 'www.seucradio.com', '1500-09-24', '2020-12-25');";
+$sql .="INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, site, endereco, data_insercao, data_vencimento) ";
+$sql .="VALUES (2, 'Faxineiro', 'Experiência de 3 anos.', '87987654575', 'seucraudio@hotmail.com', 'Rua valentino rafael 55', 'www.seucradio.com', '1500-09-24', '2020-09-26');";
 banco($sql);
 echo "<p>Tabela Anuncios populada com sucesso ! </p>";
 /* DELETAR TABELA CASO EXISTIR favbusca*/
