@@ -24,7 +24,7 @@ require("controllers/autentication.php");
         <form method="POST" action="model/salvar_anuncio.php">
           <p>Precisa-se:</p>
           <input class="caixaprecisase" name="precisase" type="text" placeholder="Digite o Título da vaga"/>
-          <p>Descrição da vaga:</p>
+          <p>Descrição da vaga: (Max: 140 caracteres)</p>
           <textarea class="caixadescricao" name="descricao" placeholder="Digite a descrição da vaga"></textarea>
           <h4>Contatos:</h4>
           <p>Telefone:</p>
