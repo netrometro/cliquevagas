@@ -6,3 +6,7 @@ output.innerHTML = slider.value; // Display the default slider value
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+
+$(document).ready(function(){
+  $('telefone').mask('(00) 0000-0000');
+});
