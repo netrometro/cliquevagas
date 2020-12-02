@@ -15,5 +15,4 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['pesquisa'])
         header("Location: ../pesquisa_salva.html");
     }
 }
-header("Location: ../index.php");
 ?>
