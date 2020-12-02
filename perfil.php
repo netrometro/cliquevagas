@@ -8,7 +8,7 @@ $resultado = banco($sql);
 $resultado = pg_fetch_assoc($resultado);
 $empresa = $resultado['nome'];
 
-$sql = "SELECT * FROM anuncio WHERE codigo_empresa=" . $_SESSION['usuario'];
+$sql = "SELECT * FROM anuncios WHERE codigo_empresa=" . $_SESSION['usuario'];
 $resultado = banco($sql);
 //$resultado = pg_fetch_assoc($resultado);
 
@@ -61,7 +61,7 @@ $resultado = banco($sql);
           </div>
 <?php } ?>
 
-          <div class="card inativo">
+          <!--div class="card inativo">
             <div class="col c1">
               <a href="model/cancelar_anuncio.php?codigo=  <?= 1 ?>"><i class="material-icons">edit</i></a>
             </div>
@@ -78,7 +78,7 @@ $resultado = banco($sql);
             <div class="col c3">
               <a href="#"><i class="material-icons">cancel</i></a>
             </div>
-          </div>
+          </div-->
 
         </div>
 
