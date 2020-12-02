@@ -21,6 +21,3 @@ if (isset($_POST['email']) && $_POST['email'] != "" && isset($_POST['pesquisa'])
     echo "<p>Erro !</p>";
 }
 ?>
-
-
-       
