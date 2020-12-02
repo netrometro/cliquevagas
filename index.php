@@ -48,7 +48,6 @@ require("model/pesquisar_anuncio.php");
                 <p>Vencimento <?= $row['data_vencimento'] ?></p>
               </div>
             </div>
-            
             <h4><?= $row['precisase'] ?></h4>           
             <p><?= $row['descricao'] ?></p>
             <p><strong>Contato:</strong></p>    
