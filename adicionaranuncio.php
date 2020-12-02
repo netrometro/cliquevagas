@@ -9,6 +9,9 @@ require("controllers/autentication.php");
     <title>Clique Vagas Caruaru</title>
     <link rel="stylesheet" href="style/principal.css" />
     <link rel="stylesheet" href="style/adicionaranuncio.css" />
+    <script type="text/javascript">
+
+    </script>
   </head>
   <body class="bg2">
     <div class="container">
@@ -25,7 +28,7 @@ require("controllers/autentication.php");
           <textarea class="caixadescricao" name="descricao" placeholder="Digite a descrição da vaga"></textarea>
           <h4>Contatos:</h4>
           <p>Telefone:</p>
-          <input class="caixatelefone" type="tel" name="telefone" data-masck="(00) 00000-0000" data-masck -selectonfocus="true" placeholder="Digite o telefone para contato"/>
+          <input class="caixatelefone" type="tel" name="telefone" id="telefone" maxlength="15" onkeypress="mascara(this)" placeholder="Digite o telefone para contato"/>
           <p>E-mail:</p>
           <input class="caixaemail" type="email" name="email" placeholder="Digite o e-mail para contato"/>
           <p>Site:</p>
