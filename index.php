@@ -30,7 +30,7 @@ require("model/pesquisar_anuncio.php");
           <p class="mensagem">Encontre uma oportunidade de emprego.</p>
           <form action="index.php" method="post">
             <div class="caixatexto">
-              <input name="busca" type="text" placeholder="Procure sua vaga" />
+              <input name="busca" type="text" placeholder="Procure sua vaga" value="<?= ($busca) ? $_POST["busca"] : '' ?>" />
               <button type="submit"><i class="material-icons">search</i></button>
             </div>
           </form>
