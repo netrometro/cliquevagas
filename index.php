@@ -42,7 +42,7 @@ require("model/pesquisar_anuncio.php");
           <div class="container card">
             <div class="empresaedata">
               <div class="nomeempresa">
-                <h3>......</h3>
+                <h3><?= $row['nome'] ?></h3>
               </div> 
               <div class="datavencimento"> 
 <?php
