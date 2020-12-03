@@ -22,6 +22,7 @@ $resultado = banco($sql);
     <link rel="stylesheet" href="style/principal.css" />
     <link rel="stylesheet" href="style/botoes.css" />
     <link rel="stylesheet" href="style/card.css" />
+    <link rel="stylesheet" href="style/perfil.css" />
   </head>
   <body class="bg2">
     <div class="container">
@@ -31,7 +32,7 @@ $resultado = banco($sql);
       </div>
       <div class="conteudo">
       <h3 class="empresa"><?= $empresa ?></h3>
-      <a class="" href="controllers/logout.php">SAIR</a>
+      <a class="sair" href="controllers/logout.php">SAIR</a>
       <a class="bt_principal" href="adicionaranuncio.php">Anunciar</a>
       
       <div class="resultado">
