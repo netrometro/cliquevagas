@@ -43,6 +43,9 @@ $resultado = banco($sql);
           if (date("Y-m-d") > $row['data_vencimento']) {
             $inativo = true;
           }
+          
+$date = date_create($row['data_vencimento']);
+$date = date_format($date, 'd-m-Y');
 ?>
 
           <div class="card  <?= ($inativo) ? 'inativo' : '' ?>">
@@ -51,7 +54,7 @@ $resultado = banco($sql);
             </div>
             <div class="col c2">
               <p><?= $row['precisase'] ?></p>
-              <p><?= $row['data_vencimento'] ?></p>
+              <p><?= $date ?></p>
               <p><?= $row['descricao'] ?></p>
               <p><strong>Contato:</strong></p>
               <p><?= $row['email'] ?></p>
