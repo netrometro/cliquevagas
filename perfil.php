@@ -40,7 +40,8 @@ $resultado = banco($sql);
 <?php while ($row = pg_fetch_assoc($resultado)) { 
           // Verifica a data de vencimento, se for menor que a data de hoje $inativo = true
           $inativo = false;
-          if (date("Y-m-d") > $row['data_vencimento']) {
+          echo date("Y-m-d") . '   ' . $row['data_vencimento'];
+          if (date("Y-m-d") >= $row['data_vencimento']) {
             $inativo = true;
           }
           
