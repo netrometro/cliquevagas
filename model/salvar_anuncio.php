@@ -12,8 +12,8 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
     $endereco = pg_escape_string($_POST['endereco']);
     $dias = pg_escape_string($_POST['dias']);
 
-    $datainsercao = date("Y/m/d");
-    $datavencimento = date('Y/m/d', strtotime($datainsercao . ' + ' . $dias .' days'));
+    $datainsercao = date("d/m/Y");
+    $datavencimento = date('d/m/Y', strtotime($datainsercao . ' + ' . $dias .' days'));
 
     $codigoempresa = $_SESSION['usuario'];
    
