@@ -44,8 +44,12 @@ require("model/pesquisar_anuncio.php");
               <div class="nomeempresa">
                 <h3>......</h3>
               </div> 
-              <div class="datavencimento">             
-                <p>Vencimento <?= $row['data_vencimento'] ?></p>
+              <div class="datavencimento"> 
+<?php
+$date = date_create($row['data_vencimento']);
+$date = date_format($date, 'd-m-Y');
+?>            
+                <p>Vencimento <?= $date ?></p>
               </div>
             </div>
             <h4><?= $row['precisase'] ?></h4>           
