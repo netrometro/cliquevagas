@@ -69,7 +69,7 @@ $date = date_format($date, 'd-m-Y');
           <div class="conteudo"><p>Cadastre seu e-mail que lhe enviaremos uma oportunidade assim que ela for cadastrada.</p></div>
           <div class="formsalvarpesquisa">
             <form action="model/salvar_pesquisa.php" method="post">
-              <input class="digiteemail" name="email" type="text" placeholder="Digite seu e-mail" />
+              <input class="digiteemail" name="email" type="email" placeholder="Digite seu e-mail (Obrigatório)" required/>
               <input type="hidden" name="pesquisa" value="<?= ($busca) ? $_POST['busca'] : '' ?>" />
               <button class="botaocancelar" type="button" onclick="cancel()">Cancelar</button>
               <input class="botaosalvar" type="submit" value="Salvar pesquisa" />
