@@ -55,10 +55,10 @@ $date = date_format($date, 'd-m-Y');
             <h4><?= $row['precisase'] ?></h4>           
             <p><?= $row['descricao'] ?></p>
             <p><strong>Contato:</strong></p>    
-            <p>caruaru@gmail.com</p>
-            <p>site</p>
-            <p>telefone</p>
-            <p>endereço</p>
+            <p><?= $row['email'] ?></p>
+            <p><?= $row['site'] ?></p>
+            <p><?= $row['telefone'] ?></p>
+            <p><?= $row['endereco'] ?></p>
           </div>
 <?php } ?>
         </div>
