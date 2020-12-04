@@ -27,6 +27,6 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
     // Envia um e-mail para cada e-mail do resultado
 
    header("Location: ../perfil.php");
-}
-header("Location: ../erroformulario.html");
+} else
+    header("Location: ../erroformulario.html");
 ?>
