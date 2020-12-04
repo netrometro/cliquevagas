@@ -32,7 +32,7 @@ require("controllers/autentication.php");
           <p>E-mail:</p>
           <input class="caixaemail" type="email" name="email" placeholder="Digite o e-mail para contato"/>
           <p>Site:</p>
-          <input class="caixasite" type="url" name="site" placeholder="Digite o site para contato"/>
+          <input class="caixasite" type="text" name="site" placeholder="Digite o site para contato"/>
           <p>Endereço da empresa:</p>
           <input class="caixaendereco" type="text" name="endereco" placeholder="Digite o endereço para contato"/>
           <h4>Tempo de anúncio:</h4>
