@@ -8,7 +8,7 @@ $resultado = banco($sql);
 $resultado = pg_fetch_assoc($resultado);
 $empresa = $resultado['nome'];
 
-$sql = "SELECT * FROM anuncios  WHERE codigo_empresa=" . $_SESSION['usuario'];
+$sql = "SELECT * FROM anuncios  WHERE codigo_empresa=" . $_SESSION['usuario'] . "ORDER BY data_insercao DESC";
 $resultado = banco($sql);
 //$resultado = pg_fetch_assoc($resultado);
 ?>
