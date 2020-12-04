@@ -32,12 +32,12 @@ $endereco = $resultado['endereco'];
         <h3>Criar anúncio:</h3>
         <form>
           <p>Precisa-se:</p>
-          <input class="caixaprecisase" type="text" method="POST" value="<?php $precisase ?>"/>
+          <input class="caixaprecisase" type="text" value="<?php $precisase ?>"/>
           <p>Descrição da vaga: <p id="max">(Max: 140 caracteres)</p></p>
-          <input class="caixadescricao" type="text" method="POST" value="<?php $descricao ?>" />
+          <textarea class="caixadescricao" maxlength="140" type="text" method="POST" value="<?php $descricao ?>"></textarea>
           <h4>Contatos:</h4>
           <p>Telefone:</p>
-          <input class="caixatelefone" type="tel" data-masck="(00) 00000-0000" data-masck -selectonfocus="true"  value="<?php $telefone ?>" />
+          <input class="caixatelefone" type="tel" id="telefone" maxlength="15" onkeypress="mascara(this)"  value="<?php $telefone ?>" />
           <p>E-mail:</p>
           <input class="caixaemail" type="email" method="POST" value="<?php $email ?>" />
           <p>Site:</p>
