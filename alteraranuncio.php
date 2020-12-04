@@ -41,7 +41,7 @@ $endereco = $resultado['endereco'];
           <p>E-mail:</p>
           <input class="caixaemail" type="email" method="POST" value="<?php $email ?>" />
           <p>Site:</p>
-          <input class="caixasite" type="url" method="POST" value="<?php $site ?>" />
+          <input class="caixasite" type="text" method="POST" value="<?php $site ?>" />
           <p>Endereço da empresa:</p>
           <input class="caixaendereco" type="text" method="POST" value="<?php $endereco ?>" />
           <h4>Tempo de anúncio:</h4>
