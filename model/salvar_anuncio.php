@@ -28,5 +28,5 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
 
    header("Location: ../perfil.php");
 }
-//header("Location: ../erroformulario.html");
+header("Location: ../erroformulario.html");
 ?>
