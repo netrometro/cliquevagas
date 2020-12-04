@@ -41,7 +41,7 @@ require("model/pesquisar_anuncio.php");
 <?php while ($row = pg_fetch_assoc($resultado)) { ?>
           <div class="container card">
           <div class="precisaseclasse">
-          <h2><?= $row['precisase'] ?></h2>  
+          <h3><?= strtoupper($row['precisase']) ?></h3>  
           </div>
             <div class="empresaedata">
               <div class="nomeempresa">
