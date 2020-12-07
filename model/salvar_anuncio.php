@@ -41,7 +41,7 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
     // Entra em um laço de repetição
     // Envia um e-mail para cada e-mail do resultado
 
-   header("Location: ../perfil.php");
+   //header("Location: ../perfil.php");
 } else
     header("Location: ../erroformulario.html");
 ?>
