@@ -10,6 +10,7 @@ if (isset($_POST['nome']) && $_POST['nome'] != "" && isset($_POST['email']) && $
     $sql .= " VALUES ('$nome', '$email', '$senha');";
     $resultado = banco($sql);
     header("Location: ../login.php");
+} else {
+    header("Location: ../erroformulario.html");
 }
-header("Location: ../erroformulario.html");
 ?>

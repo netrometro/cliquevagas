@@ -4,6 +4,8 @@ if (isset($_POST['busca']) && $_POST['busca'] != "") {
   $busca = true;
 }
 require("model/pesquisar_anuncio.php");
+
+require()
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
