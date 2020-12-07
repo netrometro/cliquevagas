@@ -4,6 +4,8 @@ if (isset($_POST['busca']) && $_POST['busca'] != "") {
   $busca = true;
 }
 require("model/pesquisar_anuncio.php");
+
+require()
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -40,20 +42,22 @@ require("model/pesquisar_anuncio.php");
           <p class="mensagem">Vagas <?= $vagas ?></p>
 <?php while ($row = pg_fetch_assoc($resultado)) { ?>
           <div class="container card">
+          <div class="precisaseclasse">
+          <h3><?= strtoupper($row['precisase']) ?></h3>  
+          </div>
             <div class="empresaedata">
               <div class="nomeempresa">
-                <h3><?= $row['nome'] ?></h3>
+                <h4><?= $row['nome'] ?></h4>
               </div> 
               <div class="datavencimento"> 
 <?php
 $date = date_create($row['data_vencimento']);
 $date = date_format($date, 'd-m-Y');
 ?>            
+            <p><?= $row['descricao'] ?></p>
                 <p>Vencimento <?= $date ?></p>
               </div>
             </div>
-            <h4><?= $row['precisase'] ?></h4>           
-            <p><?= $row['descricao'] ?></p>
             <p><strong>Contato:</strong></p>    
             <p><?= $row['email'] ?></p>
             <p><?= $row['site'] ?></p>
