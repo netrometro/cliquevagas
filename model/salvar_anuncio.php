@@ -56,6 +56,9 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
             $mail->Subject = "Chegou uma oportunidade";
             $mail->IsHtml(true);
 
+            $datavencimento = date_create($datavencimento);
+            $datavencimento = date_format($datavencimento, 'd-m-Y');
+
             $body  = "<html><body>";
             $body .= "<p><h3>Precisa-se de $precisase </p></h3>";
             $body .= "<p>$descricao</p>";
