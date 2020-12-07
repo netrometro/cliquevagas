@@ -28,7 +28,7 @@ $resultado = banco($sql);
     <div class="container">
       <div class="titulo bg1">
       <a href="index.php"> <img   src="images/logo.png" /></a>
-      <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
+      <a class="limpartitulo" href="index.php"> Clique Vagas Caruaru</a>
       </div>
       <div class="conteudo">
       <h3 class="empresa"><?= $empresa ?></h3>

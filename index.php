@@ -19,7 +19,7 @@ require("model/pesquisar_anuncio.php");
   <body class="bg2">
     <div class="container">
       <div class="titulo bg1">
-        <a class="limpartitulo" href="index.php"> <img src="images/logo.png" /> Click Vagas Caruaru</a>
+        <a class="limpartitulo" href="index.php"> <img src="images/logo.png" /> Clique Vagas Caruaru</a>
       </div>
       <div class="conteudo">
         <div class="menu" <?= ($busca) ? 'style="display:none"' : "" ?> >

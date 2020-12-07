@@ -33,7 +33,7 @@ if (isset($_SESSION['resultado']) and $_SESSION['resultado'] != "") {
     <header>
     <div class="titulo bg1">
         <a href="index.php"> <img   src="images/logo.png" /></a>
-        <a class="limpartitulo" href="index.php"> Click Vagas Caruaru</a>
+        <a class="limpartitulo" href="index.php"> Clique Vagas Caruaru</a>
     <div class="armario">
       <div class="gaveta">
         <form action='#' method='post'>
