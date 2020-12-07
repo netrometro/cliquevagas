@@ -16,11 +16,11 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
     $datavencimento = date('Y/m/d', strtotime($datainsercao . ' + ' . $dias .' days'));
 
     $codigoempresa = $_SESSION['usuario'];
-   /*
+   
    $sql  = "INSERT INTO anuncios (codigo_empresa, precisase, descricao, telefone, email, site, endereco, data_insercao, data_vencimento) ";
    $sql .= "VALUES ($codigoempresa, '$precisase', '$descricao', '$telefone', '$email', '$site', '$endereco', '$datainsercao', '$datavencimento');";
    $resultado = banco($sql);
-*/
+
     // faz uma pesquisa em favbusca para todos os e-mail que salvaram a busca (%LIKE%)
     $sql = "SELECT * FROM favbusca";
     $resultado = banco($sql);
@@ -28,20 +28,55 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
     $emails = array();
     echo $precisase . '<br />';
     while ($linha = pg_fetch_assoc($resultado)) {
-        echo $linha['buscafavorita'] . '<br />';
-        echo strpos($precisase, $linha['buscafavorita']) . '<br />';
         $pos = strpos($precisase, $linha['buscafavorita']);
-        if ($pos instanceof undefined)
+        if ($pos > -1) {
             array_push($emails, $linha['email']);
+        }
     }
+    //print_r($emails);
+    //echo count($emails);
 
-    print_r($emails);
+    require_once("../phpmailer/class.phpmailer.php");
 
     // Apenas, se tiver ao menos um resultado faz...
-    // Entra em um laço de repetição
-    // Envia um e-mail para cada e-mail do resultado
+    if (count($emails) > 0) {
+        // Entra em um laço de repetição
+        foreach ($emails as $emaill) {
+            // Envia um e-mail para cada e-mail do resultado
+            $mail = new PHPMailer();
+            $mail->IsSMTP();		        // Ativar SMTP
+            $mail->SMTPDebug = 1;		    // Debugar: 1 = erros e mensagens, 2 = mensagens apenas
+            $mail->SMTPAuth = true;		    // Autenticação ativada
+            $mail->SMTPSecure = 'ssl';	    // SSL REQUERIDO pelo GMail
+            $mail->Host = 'smtp.gmail.com';	// SMTP utilizado
+            $mail->Port = 465;  		    // A porta 465 deverá estar aberta em seu servidor
+            $mail->Username = getenv("EMAIL");
+            $mail->Password = getenv("PASSWORD");
+            $mail->SetFrom(getenv("EMAIL"), "Clique Vagas Caruaru");
+            $mail->Subject = "Chegou uma oportunidade";
+            $mail->IsHtml(true);
 
-   //header("Location: ../perfil.php");
+            $body  = "<html><body>";
+            $body .= "<p><h3>Precisa-se de $precisase </p></h3>";
+            $body .= "<p>$descricao</p>";
+            $body .= "<p><strong>Contato:</strong></p>";
+            $body .= "<p>$telefone</p>";
+            $body .= "<p>$email</p>";
+            $body .= "<p>$site</p>";
+            $body .= "<p>$endereco</p>";
+            $body .= "<p>Vencimento da proposta $datavencimento</p>";
+            $body .= "</body></html>";
+
+            $mail->Body = $body;
+            $mail->AddAddress($emaill);
+            if(!$mail->Send()) {
+                echo 'Mail error: '.$mail->ErrorInfo;
+            } else {
+                echo 'Mensagem enviada! ' . $email;
+            }
+        }
+    }
+   header("Location: ../perfil.php");
 } else
     header("Location: ../erroformulario.html");
 ?>
