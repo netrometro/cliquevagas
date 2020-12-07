@@ -5,8 +5,13 @@ if (isset($_POST['busca']) && $_POST['busca'] != "") {
 }
 require("model/pesquisar_anuncio.php");
 
-require()
+session_start();
+$sessao = false;
+if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != "" ){  
+  $sessao = true;
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -24,9 +29,11 @@ require()
         <a class="limpartitulo" href="index.php"> <img src="images/logo.png" /> Click Vagas Caruaru</a>
       </div>
       <div class="conteudo">
-        <div class="menu" <?= ($busca) ? 'style="display:none"' : "" ?> >
+      <a class="botao bg3" <?= ($sessao) ? 'style="display:block"' : 'style="display:none"'  ?> href="perfil.php">Entrar no perfil da empresa</a>
+        <div class="menu" <?= ($busca || $sessao) ? 'style="display:none"' : "" ?> >
           <a class="botao bg3" href="login.php">Entrar como empresa</a>
           <a class="botao bg4" href="empresa.html">Cadastrar empresa</a>
+
         </div>
         <div class="pesquisa">
           <p class="mensagem">Encontre uma oportunidade de emprego.</p>
