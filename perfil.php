@@ -32,20 +32,21 @@ $resultado = banco($sql);
       </div>
       <div class="conteudo">
       <h3 class="empresa"><?= $empresa ?></h3>
-      <a class="sair" href="controllers/logout.php">SAIR</a>
       <a class="bt_principal" href="adicionaranuncio.php">Anunciar</a>
+      <a class="bt_secundario" href="controllers/logout.php">Sair</a>
       
       <div class="resultado">
 
-<?php while ($row = pg_fetch_assoc($resultado)) { 
-          // Verifica a data de vencimento, se for menor que a data de hoje $inativo = true
-          $inativo = false;
-          if (date("Y-m-d") >= $row['data_vencimento']) {
-            $inativo = true;
-          }
+<?php
+while ($row = pg_fetch_assoc($resultado)) { 
+  // Verifica a data de vencimento, se for menor que a data de hoje $inativo = true
+  $inativo = false;
+  if (date("Y-m-d") >= $row['data_vencimento']) {
+    $inativo = true;
+  }
           
-$date = date_create($row['data_vencimento']);
-$date = date_format($date, 'd-m-Y');
+  $date = date_create($row['data_vencimento']);
+  $date = date_format($date, 'd-m-Y');
 ?>
 
           <div class="card  <?= ($inativo) ? 'inativo' : '' ?>">
@@ -67,26 +68,6 @@ $date = date_format($date, 'd-m-Y');
             </div>
           </div>
 <?php } ?>
-
-          <!--div class="card inativo">
-            <div class="col c1">
-              <a href="model/cancelar_anuncio.php?codigo=  <?= 1 ?>"><i class="material-icons">edit</i></a>
-            </div>
-            <div class="col c2">
-              <p>SENAC</p>
-              <p>27/11/2020</p>
-              <p>Descrição...</p>
-              <p><strong>Contato:</strong></p>
-              <p>caruaru@gmail.com</p>
-              <p>site</p>
-              <p>telefone</p>
-              <p>endereço</p>
-            </div>
-            <div class="col c3">
-              <a href="#"><i class="material-icons">cancel</i></a>
-            </div>
-          </div-->
-
         </div>
 
       </div>
