@@ -78,6 +78,10 @@ a {
     color: #BE9B7B;
 }
 
+input:invalid {
+    border: 1px solid red;
+}
+
 @media screen and (min-width: 480px) {
     .caixaemail {
         width: 500px;
