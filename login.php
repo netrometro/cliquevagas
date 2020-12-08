@@ -24,7 +24,7 @@
               <p class="nameemail">E-mail:</p>
               <input name="email" class="caixaemail" type="email" placeholder="Digite o email da empresa" />
               <p class="namesenha">Senha:</p>
-              <input name="senha" class="caixasenha" type="password" placeholder="Digite a senha da empresa" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$])[a-zA-Z0-9@#$]{8,50}$" required />
+              <input name="senha" class="caixasenha" type="password" placeholder="Digite a senha da empresa" minlength="8" />
               <button class="botaoconfirma" type="submit">Entrar</button>
           </form>
         </div>
