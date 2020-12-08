@@ -28,13 +28,15 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
     $emails = array();
     echo $precisase . '<br />';
     while ($linha = pg_fetch_assoc($resultado)) {
-        $pos = strpos($precisase, $linha['buscafavorita']);
+        $s1 = strtolower($precisase);
+        $s2 = strtolower($linha['buscafavorita']);
+        $pos = strpos($s1, $s2);
         if ($pos > -1) {
             array_push($emails, $linha['email']);
         }
     }
     print_r($emails);
-    echo count("<p>" . $emails . "<p/>");
+    echo "<p>" . count($emails) . "<p/>";
 
     require_once("../phpmailer/class.phpmailer.php");
 
