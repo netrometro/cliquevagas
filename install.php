@@ -71,9 +71,9 @@ banco($sql);
 echo "<p>Tabela Busca Favorita(favbusca) criada com sucesso ! </p>";
 /* POPULANDO TABELA */
 $sql ="INSERT INTO favbusca (email, buscaFavorita) ";
-$sql .="VALUES ('fabinhomotorista@gmail.com', 'Vaga para motorista');";
+$sql .="VALUES ('fabinhomotorista@gmail.com', 'motorista');";
 $sql .="INSERT INTO favbusca (email, buscaFavorita) ";
-$sql .="VALUES ('higor@gmail.com', 'Vaga para Analista de T.I');";
+$sql .="VALUES ('higor@gmail.com', 'analista');";
 banco($sql);
 echo "<p>Tabela Busca Favorita(favbusca) populada com sucesso ! </p>";
 

@@ -33,8 +33,8 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
             array_push($emails, $linha['email']);
         }
     }
-    //print_r($emails);
-    //echo count($emails);
+    print_r($emails);
+    echo count("<p>" . $emails . "<p/>");
 
     require_once("../phpmailer/class.phpmailer.php");
 
@@ -79,7 +79,7 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
             }
         }
     }
-   header("Location: ../perfil.php");
+   //header("Location: ../perfil.php");
 } else
     header("Location: ../erroformulario.html");
 ?>
