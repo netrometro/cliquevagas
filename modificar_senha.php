@@ -20,7 +20,7 @@
       </div>
 
       <div class="formulario">
-      <form method="POST" action="">
+      <form action="controllers/recuperar_senha.php" method="POST">
         <p>Nova senha:</p>
         <input class="caixasenha" type="password" name="senha" placeholder="Digite a nova senha" minlength="8" />
         <p>Confirmar senha:</p>
