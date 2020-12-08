@@ -22,7 +22,7 @@
         <div class="formulario">
           <form action="controllers/login.php" method="POST">
               <p class="nameemail">E-mail:</p>
-              <input name="email" class="caixaemail" type="email" placeholder="Digite o email da empresa" />
+              <input name="email" class="caixaemail" type="email" placeholder="Digite o e-mail da empresa" />
               <p class="namesenha">Senha:</p>
               <input name="senha" class="caixasenha" type="password" placeholder="Digite a senha da empresa" minlength="8" />
               <button class="botaoconfirma" type="submit">Entrar</button>
