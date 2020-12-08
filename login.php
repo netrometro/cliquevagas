@@ -30,7 +30,7 @@
         </div>
 
         <div>
-          <p class="textodownbotao">Esqueceu sua senha?<br /><a class="linksdownbotao" href="#">Clique aqui para recuperar.</a></p>
+          <p class="textodownbotao">Esqueceu sua senha?<br /><a class="linksdownbotao" href="recuperar.php">Clique aqui para recuperar.</a></p>
           <p class="pjatemconta">Não possui conta?<br /><a class="linksdownbotao" href="empresa.html"> Clique aqui para se cadastrar.</a></p>
         </div>
 
