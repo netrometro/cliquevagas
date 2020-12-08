@@ -51,7 +51,7 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
             $mail->Host = 'smtp.gmail.com';	// SMTP utilizado
             $mail->Port = 465;  		    // A porta 465 deverá estar aberta em seu servidor
             $mail->Username = getenv("EMAIL");
-            $mail->Password = getenv("PASSWORD");
+            $mail->Password = getenv("PASSWORD_EMAIL");
             $mail->SetFrom(getenv("EMAIL"), "Clique Vagas Caruaru");
             $mail->Subject = "Chegou uma oportunidade";
             $mail->IsHtml(true);
