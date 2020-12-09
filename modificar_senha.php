@@ -1,3 +1,9 @@
+<?php
+  if (isset($_GET['chave']) && $_GET['chave'] != "") {
+    header("Location: /cliquevagas/erro_hash.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
