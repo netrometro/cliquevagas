@@ -70,6 +70,7 @@ if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
             $body .= "<p>$site</p>";
             $body .= "<p>$endereco</p>";
             $body .= "<p>Vencimento da proposta $datavencimento</p>";
+            $body .= "<p><a href= 'http://$_SERVER[HTTP_HOST]" . "/cancelar_pesquisa.php?email=" . $emaill . "'>Clique aqui para parar de receber e-mail sobre esta pesquisa</a></p>";
             $body .= "</body></html>";
 
             $mail->Body = $body;
