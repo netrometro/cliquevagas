@@ -28,8 +28,6 @@
         <button class="botaoconfirma" type="submit" >Recuperar senha</button>
       </form>
       </div>
-
-
-
-
     </div>
+  </body>
+</html>
