@@ -1,6 +1,6 @@
 <?php
-  if (isset($_GET['chave']) && $_GET['chave'] != "") {
-    header("Location: /cliquevagas/erro_hash.html");
+  if (!isset($_GET['chave']) || $_GET['chave'] == "") {
+      header("Location: /cliquevagas/erro_hash.html");
 }
 ?>
 
@@ -26,11 +26,10 @@
       </div>
 
       <div class="formulario">
-      <form action="controllers/recuperar_senha.php" method="POST">
+      <form action="controllers/modificar_senha.php" method="POST">
         <p>Nova senha:</p>
         <input class="caixasenha" type="password" name="senha" placeholder="Digite a nova senha" minlength="8" />
-        <p>Confirmar senha:</p>
-        <input class="caixasenha" type="password" name="senha" placeholder="Confirme a nova senha" minlength="8" />
+        <input type="hidden" name="chave" value="<?= $_GET['chave'] ?>" />
         <button class="botaoconfirma" type="submit" >Recuperar senha</button>
       </form>
       </div>
