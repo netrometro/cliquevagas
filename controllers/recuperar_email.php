@@ -17,6 +17,8 @@ if (isset($_POST['email']) && $_POST['email'] != "" ) {
         $chave = md5($_POST['email'] . date("Y/m/d"));
 
         // Inserir no banco
+        $sql = "UPDATE empresa SET chave = '$chave' WHERE email = '$email';" ;
+        $resultado = banco($sql);   
 
         //   cria um email e envia para o e-mail com uma url + hash
         require_once("../phpmailer/class.phpmailer.php");
