@@ -1,11 +1,14 @@
 <?php
 // verifica a autenticação
+  require("../controllers/autentication.php");
+  require("persistency/db.php");
+  // recebe por get o código do anúncio a ser cancelado
+  if (isset($_GET['codigo']) && $_GET['codigo'] != "" ) {
+    
+  // se existir
+  //    faz o update da data final do anúncio para o dia de ontem
+  //    redireciona para a página de perfil
+    
+  }
 
-// recebe por get o código do anúncio a ser cancelado
-// se existir
-//    faz o update da data final do anúncio para o dia de ontem
-// se não existir
-//    emite uma mensagem de erro
-
-// redireciona para a página de perfil
 ?>

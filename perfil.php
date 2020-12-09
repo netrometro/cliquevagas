@@ -51,7 +51,7 @@ while ($row = pg_fetch_assoc($resultado)) {
 
           <div class="card  <?= ($inativo) ? 'inativo' : '' ?>">
             <div class="col c1">
-              <a href="alteraranuncio.php"><i class="material-icons">edit</i></a>
+              <a href="model/alterar_anuncio.php?codigo=<?= $row['codigo'] ?>"><i class="material-icons">edit</i></a>
             </div>
             <div class="col c2">
               <p><?= $row['precisase'] ?></p>
@@ -64,7 +64,7 @@ while ($row = pg_fetch_assoc($resultado)) {
               <p><?= $row['endereco'] ?></p>
             </div>
             <div class="col c3">
-              <a href="#"><i class="material-icons">cancel</i></a>
+              <a href="model/cancelar_anuncio.php?codigo=<?= $row['codigo'] ?>"><i class="material-icons">cancel</i></a>
             </div>
           </div>
 <?php } ?>
