@@ -7,7 +7,7 @@ if (isset($_POST['email']) && $_POST['email'] != "" ) {
     $sql = "SELECT * FROM empresa WHERE email = '$email'";
     $resultado = banco($sql);
     // Se não existir
-    if (pg_num_rows($resultado) != 1) {
+    if (pg_num_rows($resultado) < 1) {
         // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
         //alert('E-mail não encontrado. Por favor tente novamente.');
         header('Location: ../erro_email_nao_encontrado.html');
@@ -15,6 +15,8 @@ if (isset($_POST['email']) && $_POST['email'] != "" ) {
         // Se existir
         //   cria uma hash md5 com o e-mail e data/hora do momento
         $chave = md5($_POST['email'] . date("Y/m/d"));
+
+        // Inserir no banco
 
         //   cria um email e envia para o e-mail com uma url + hash
         require_once("../phpmailer/class.phpmailer.php");
@@ -36,8 +38,17 @@ if (isset($_POST['email']) && $_POST['email'] != "" ) {
         $body  = "<html><body>";
         $body .= "<p><h3>Email de recuperação de senha </p></h3>";
         $body .= "<p>Acesse o link abaixo para alterar sua senha.</p>";
-        $body .= "<p><a href= 'http://$_SERVER[HTTP_HOST]" . "?chave=" . $chave . "'></a></p>";
+        $body .= "<p><a href= 'http://$_SERVER[HTTP_HOST]" . "?chave=" . $chave . "'>" . "http://$_SERVER[HTTP_HOST]" . "?chave=" . $chave . "</a></p>";
         $body .= "</body></html>";
+        
+        $mail->Body = $body;
+        $mail->AddAddress($email);
+        
+        if(!$mail->Send()) {
+            echo 'Mail error: '.$mail->ErrorInfo;
+        } else {
+            echo 'Mensagem enviada! ' . $email;
+        }
 
 //      header('Location: ../email_enviado.html');
     } 
