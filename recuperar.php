@@ -21,7 +21,7 @@
       </div>
 
       <div class="formulario">
-      <form method="POST" action="">
+      <form method="POST" action="controllers/recuperar_email.php">
           <p>E-mail:</p>
           <input class="caixaemail" type="email" name="email" placeholder="Digite o e-mail da sua empresa" />
           <button class="botaoconfirma" type="submit" >Recuperar senha</button>
