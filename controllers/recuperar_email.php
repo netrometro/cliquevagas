@@ -38,7 +38,7 @@ if (isset($_POST['email']) && $_POST['email'] != "" ) {
         $body  = "<html><body>";
         $body .= "<p><h3>Email de recuperação de senha </p></h3>";
         $body .= "<p>Acesse o link abaixo para alterar sua senha.</p>";
-        $body .= "<p><a href= 'http://$_SERVER[HTTP_HOST]" . "?chave=" . $chave . "'>" . "http://$_SERVER[HTTP_HOST]" . "?chave=" . $chave . "</a></p>";
+        $body .= "<p><a href= 'http://$_SERVER[HTTP_HOST]" . "/modificar_senha.php?chave=" . $chave . "'>" . "http://$_SERVER[HTTP_HOST]" . "/modificar_senha.php?chave=" . $chave . "</a></p>";
         $body .= "</body></html>";
         
         $mail->Body = $body;
