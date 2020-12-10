@@ -46,12 +46,12 @@ if (isset($_GET['codigo']) && $_GET['codigo'] != "") {
         <form method='POST' action="model/alterar_anuncio.php">
           <input  type="hidden" name="codigo" value="<?= $codigo ?>" />
           <p>Precisa-se:</p>
-          <input class="caixaprecisase" name="precisase" type="text" value="<?php $precisase ?>"/>
+          <input class="caixaprecisase" name="precisase" type="text" value="<?= $precisase ?>"/>
           <p>Descrição da vaga: <p id="max">(Max: 400 caracteres)</p>
-          <textarea class="caixadescricao" name="descrisao" maxlength="400" type="text" style="height:auto!important" rows="10" value="<?php $descricao ?>"></textarea>
+          <textarea class="caixadescricao" name="descrisao" maxlength="400" type="text" style="height:auto!important" rows="10" value="<?= $descricao ?>"></textarea>
           <h4>Contatos:</h4>
           <p>Telefone:</p>
-          <input class="caixatelefone" name="telefone" type="tel" id="telefone" maxlength="15" onkeypress="mascara(this)"  value="<?php $telefone ?>" />
+          <input class="caixatelefone" name="telefone" type="tel" id="telefone" maxlength="15" onkeypress="mascara(this)"  value="<?= $telefone ?>" />
           <p>E-mail:</p>
           <input class="caixaemail" type="email" name="email" value="<?= $email ?>" />
           <p>Site:</p>
@@ -60,7 +60,7 @@ if (isset($_GET['codigo']) && $_GET['codigo'] != "") {
           <input class="caixaendereco" type="text" name="endereco" value="<?= $endereco ?>" />
           <h4>Tempo de anúncio:</h4>
           <div class="slidecontainer">
-            <input type="range" min="1" max="30" value="30" class="slider" id="myRange">
+            <input type="range" name="dias" min="1" max="30" value="30" class="slider" id="myRange">
             <p>Dias: <span id="demo"></span></p>
           </div>
           <div class="botoes">

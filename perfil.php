@@ -51,7 +51,7 @@ while ($row = pg_fetch_assoc($resultado)) {
 
           <div class="card  <?= ($inativo) ? 'inativo' : '' ?>">
             <div class="col c1">
-              <a href="model/alterar_anuncio.php?codigo=<?= $row['codigo'] ?>"><i class="material-icons">edit</i></a>
+              <a href="alterar_anuncio.php?codigo=<?= $row['codigo'] ?>"><i class="material-icons">edit</i></a>
             </div>
             <div class="col c2">
               <p><?= $row['precisase'] ?></p>
