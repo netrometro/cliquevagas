@@ -25,6 +25,7 @@
               <input name="email" class="caixaemail" type="email" placeholder="Digite o e-mail da empresa" />
               <p class="namesenha">Senha:</p>
               <input name="senha" class="caixasenha" type="password" placeholder="Digite a senha da empresa" minlength="8" />
+              <p class="textodownbotao">A senha deve ter no mínimo 8 caracteres.</p>
               <button class="botaoconfirma" type="submit">Entrar</button>
           </form>
         </div>
