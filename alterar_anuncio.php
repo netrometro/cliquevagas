@@ -1,17 +1,30 @@
 <?php 
 require("controllers/autentication.php");
-require("model/persistency/db.php");
 
-$sql = "SELECT * FROM anuncios WHERE codigo= " . $_GET['anuncio'];
-$resultado = banco($sql);
-$resultado = pg_fetch_assoc($resultado);
-$precisase = $resultado['precisase'];
-$descricao = $resultado['descricao'];
-$telefone = $resultado['telefone'];
-$email = $resultado['email'];
-$site = $resultado['site'];
-$endereco = $resultado['endereco'];
+if (isset($_GET['codigo']) && $_GET['codigo'] != "") {
+  require("model/persistency/db.php");
 
+  $cod_empresa = $_SESSION['usuario'];
+
+  $codigo = pg_escape_string($_GET['codigo']);
+  $sql = "SELECT * FROM anuncios WHERE codigo=$codigo ";
+  $resultado = banco($sql);
+
+  if (pg_num_rows($resultado) > 0) {
+    $resultado = pg_fetch_assoc($resultado);
+    $precisase = $resultado['precisase'];
+    $descricao = $resultado['descricao'];
+    $telefone = $resultado['telefone'];
+    $email = $resultado['email'];
+    $site = $resultado['site'];
+    $endereco = $resultado['endereco'];
+
+  } else {
+    header('Location: ../erro_anuncio_nao_encontrado.html');
+  }
+} else {
+  header('Location: ../erro_geral.html');
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,7 +43,7 @@ $endereco = $resultado['endereco'];
       </div>
       <div class="conteudo">
         <h3>Criar anúncio:</h3>
-        <form>
+        <form method='POST' action="model/alterar_anuncio.php">
           <p>Precisa-se:</p>
           <input class="caixaprecisase" type="text" value="<?php $precisase ?>"/>
           <p>Descrição da vaga: <p id="max">(Max: 400 caracteres)</p></p>
@@ -39,11 +52,11 @@ $endereco = $resultado['endereco'];
           <p>Telefone:</p>
           <input class="caixatelefone" type="tel" id="telefone" maxlength="15" onkeypress="mascara(this)"  value="<?php $telefone ?>" />
           <p>E-mail:</p>
-          <input class="caixaemail" type="email" method="POST" value="<?php $email ?>" />
+          <input class="caixaemail" type="email" method="POST" value="<?= $email ?>" />
           <p>Site:</p>
-          <input class="caixasite" type="text" method="POST" value="<?php $site ?>" />
+          <input class="caixasite" type="text" method="POST" value="<?= $site ?>" />
           <p>Endereço da empresa:</p>
-          <input class="caixaendereco" type="text" method="POST" value="<?php $endereco ?>" />
+          <input class="caixaendereco" type="text" method="POST" value="<?= $endereco ?>" />
           <h4>Tempo de anúncio:</h4>
           <div class="slidecontainer">
             <input type="range" min="1" max="30" value="30" class="slider" id="myRange">
