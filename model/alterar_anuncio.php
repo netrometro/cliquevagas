@@ -1,13 +1,25 @@
 <?php
   require("../controllers/autentication.php");
-  require("persistency/db.php");
 
-   // Recupera na session o código do anunciante
-  if (isset($_GET['codigo']) && $_GET['codigo'] != "" ) {
-    $codigo = pg_escape_string($_GET['codigo']);
+  if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
+    require("persistency/db.php");
 
-    // faz uma pesquisa no banco e recupera os dados referentes ao anuncio pelo código
-    $sql = "SELECT * FROM anuncios WHERE codigo = $codigo";
+    $precisase = pg_escape_string($_POST['precisase']);
+    $descricao = pg_escape_string($_POST['descricao']);
+    $telefone = pg_escape_string($_POST['telefone']);
+    $email = pg_escape_string($_POST['email']);
+    $site = pg_escape_string($_POST['site']);
+    $endereco = pg_escape_string($_POST['endereco']);
+    $dias = pg_escape_string($_POST['dias']);
+
+    $datainsercao = date("Y/m/d");
+    $datavencimento = date('Y/m/d', strtotime($datainsercao . ' + ' . $dias .' days'));
+   
+    $sql = "UPDATE ";
     $resultado = banco($sql);
+
+    header("Location: ../perfil.php");
+  } else {
+    header("Location: ../erroformulario.html");
   }
 ?>
