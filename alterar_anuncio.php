@@ -4,7 +4,6 @@ require("controllers/autentication.php");
 if (isset($_GET['codigo']) && $_GET['codigo'] != "") {
   require("model/persistency/db.php");
 
-  $cod_empresa = $_SESSION['usuario'];
 
   $codigo = pg_escape_string($_GET['codigo']);
   $sql = "SELECT * FROM anuncios WHERE codigo=$codigo ";

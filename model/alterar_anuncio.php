@@ -7,7 +7,7 @@
     $codigo = pg_escape_string($_GET['codigo']);
 
     // faz uma pesquisa no banco e recupera os dados referentes ao anuncio pelo código
-    $sql = "SELECT * FROM $codigo";
+    $sql = "SELECT * FROM anuncios WHERE codigo = $codigo";
     $resultado = banco($sql);
   }
 ?>
