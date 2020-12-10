@@ -11,6 +11,7 @@ if (isset($_GET['codigo']) && $_GET['codigo'] != "") {
 
   if (pg_num_rows($resultado) > 0) {
     $resultado = pg_fetch_assoc($resultado);
+    $codigo = $resultado['codigo'];
     $precisase = $resultado['precisase'];
     $descricao = $resultado['descricao'];
     $telefone = $resultado['telefone'];
@@ -43,19 +44,20 @@ if (isset($_GET['codigo']) && $_GET['codigo'] != "") {
       <div class="conteudo">
         <h3>Criar anúncio:</h3>
         <form method='POST' action="model/alterar_anuncio.php">
+          <input  type="hidden" name="codigo" value="<?= $codigo ?>" />
           <p>Precisa-se:</p>
-          <input class="caixaprecisase" type="text" value="<?php $precisase ?>"/>
-          <p>Descrição da vaga: <p id="max">(Max: 400 caracteres)</p></p>
-          <textarea class="caixadescricao" maxlength="400" type="text" style="height:auto!important" rows="10" value="<?php $descricao ?>"></textarea>
+          <input class="caixaprecisase" name="precisase" type="text" value="<?php $precisase ?>"/>
+          <p>Descrição da vaga: <p id="max">(Max: 400 caracteres)</p>
+          <textarea class="caixadescricao" name="descrisao" maxlength="400" type="text" style="height:auto!important" rows="10" value="<?php $descricao ?>"></textarea>
           <h4>Contatos:</h4>
           <p>Telefone:</p>
-          <input class="caixatelefone" type="tel" id="telefone" maxlength="15" onkeypress="mascara(this)"  value="<?php $telefone ?>" />
+          <input class="caixatelefone" name="telefone" type="tel" id="telefone" maxlength="15" onkeypress="mascara(this)"  value="<?php $telefone ?>" />
           <p>E-mail:</p>
-          <input class="caixaemail" type="email" method="POST" value="<?= $email ?>" />
+          <input class="caixaemail" type="email" name="email" value="<?= $email ?>" />
           <p>Site:</p>
-          <input class="caixasite" type="text" method="POST" value="<?= $site ?>" />
+          <input class="caixasite" type="text" name="site" value="<?= $site ?>" />
           <p>Endereço da empresa:</p>
-          <input class="caixaendereco" type="text" method="POST" value="<?= $endereco ?>" />
+          <input class="caixaendereco" type="text" name="endereco" value="<?= $endereco ?>" />
           <h4>Tempo de anúncio:</h4>
           <div class="slidecontainer">
             <input type="range" min="1" max="30" value="30" class="slider" id="myRange">

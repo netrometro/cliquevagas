@@ -1,7 +1,7 @@
 <?php
   require("../controllers/autentication.php");
 
-  if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
+  if (isset($_POST['precisase']) && $_POST['precisase'] != "" && ) {
     require("persistency/db.php");
 
     $precisase = pg_escape_string($_POST['precisase']);
@@ -15,7 +15,7 @@
     $datainsercao = date("Y/m/d");
     $datavencimento = date('Y/m/d', strtotime($datainsercao . ' + ' . $dias .' days'));
    
-    $sql = "UPDATE ";
+    $sql = "UPDATE anuncios SET precisase = '$precisase', descricao = '$descricao', telefone = '$telefone', email = '$email', site = '$site', endereco = '$endereco', dias = '$dias',  WHERE codigo = '$codigo'";
     $resultado = banco($sql);
 
     header("Location: ../perfil.php");
