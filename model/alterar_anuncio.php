@@ -1,7 +1,7 @@
 <?php
   require("../controllers/autentication.php");
 
-  if (isset($_POST['precisase']) && $_POST['precisase'] != "" && ) {
+  if (isset($_POST['precisase']) && $_POST['precisase'] != "" ) {
     require("persistency/db.php");
 
     $precisase = pg_escape_string($_POST['precisase']);
