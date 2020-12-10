@@ -20,7 +20,7 @@ if (isset($_POST['nome']) && $_POST['nome'] != "" &&
 
         header("Location: ../login.php");
     } else {
-        header("Location: ../erro_email.php");
+        header("Location: ../erro_email.html");
     }
 } else {
     header("Location: ../erro_formulario.html");

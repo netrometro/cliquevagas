@@ -4,18 +4,17 @@
   require("persistency/db.php");
   // recebe por get o código do anúncio a ser cancelado
   if (isset($_GET['codigo']) && $_GET['codigo'] != "" ) {
-    $chave = pg_escape_string($_POST['chave']);
+    $codigo = pg_escape_string($_GET['codigo']);
 
   // se existir
   //    faz o update da data final do anúncio para o dia de ontem
-  $datainsercao = date("Y/m/d");
-  $datavencimento = date('Y/m/d', strtotime($datainsercao . ' - ' . $dias .' days'));
+  $hoje = date("Y/m/d");
+  $datavencimento = date('Y/m/d', strtotime($hoje . ' -1 days'));
 
-  $sql = "UPDATE empresa SET data_insercao = "$datainsercao", data_vencimento = "$datavencimento" WHERE chave = '$chave'";
+  $sql = "UPDATE anuncios SET data_vencimento = '$datavencimento' WHERE codigo = '$codigo'";
   $resultado = banco($sql);  
 
   //    redireciona para a página de perfil
   header('Location: ../perfil.php'); 
   }
-
 ?>
