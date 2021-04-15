@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+}
+
+body, p, input, textarea, a {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+
+.bg1 {
+  background-color: #0b6bb5;
+}
+
+.bg2 {
+  background-color: #FFF;
+}
+
+.bg3 {
+  background-color: #0b6bb5;
+}
+
+.bg4 {
+  background-color: #0b6bb5;
+}
+
+
+.titulo {
+  color: #fddf19;
+  text-align: center;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 28px;
+}
+
+.limpartitulo {
+  text-decoration: none;
+  color: #fddf19 !important;
+}
+
+.empresa {
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,0 +1,46 @@
+.bt_principal {
+  display: block;
+  margin: 15px;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #854442;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+}
+
+.bt_principal:hover {
+  background-color: #946260;
+}
+
+.bt_secundario {
+  display: block;
+  margin: 15px;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #BE9B7B;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+}
+
+.bt_secundario:hover {
+  background-color: #cfbba8;
+}
+
+
+@media screen and (min-width: 480px) {
+  .bt_principal {
+    max-width: 580px;
+    margin: 15px auto;
+  }
+  
+  .bt_secundario {
+    max-width: 580px;
+    margin: 15px auto;
+  }
+}
